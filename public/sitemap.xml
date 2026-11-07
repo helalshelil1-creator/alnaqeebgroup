@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/about</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/about?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/about"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services/electrical-works</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services/electrical-works"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services/electrical-works?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services/electrical-works"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services/mechanical-works</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services/mechanical-works"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services/mechanical-works?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services/mechanical-works"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services/hvac-systems</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services/hvac-systems"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services/hvac-systems?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services/hvac-systems"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services/fire-fighting-fire-alarm</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services/fire-fighting-fire-alarm"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services/fire-fighting-fire-alarm?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services/fire-fighting-fire-alarm"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services/control-panels</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services/control-panels"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services/control-panels?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services/control-panels"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services/elv-smart-systems</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services/elv-smart-systems"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services/elv-smart-systems?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services/elv-smart-systems"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/services/maintenance-testing</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/services/maintenance-testing"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/services/maintenance-testing?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/services/maintenance-testing"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/corporate-headquarters</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/corporate-headquarters"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/corporate-headquarters?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/corporate-headquarters"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/residential-compound</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/residential-compound"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/residential-compound?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/residential-compound"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/industrial-warehouse</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/industrial-warehouse"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/industrial-warehouse?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/industrial-warehouse"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/hvac-retail-mall</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/hvac-retail-mall"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/hvac-retail-mall?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/hvac-retail-mall"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/fire-protection-network</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/fire-protection-network"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/fire-protection-network?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/fire-protection-network"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/mcc-control-suite</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/mcc-control-suite"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/mcc-control-suite?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/mcc-control-suite"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/infrastructure-mep</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/infrastructure-mep"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/infrastructure-mep?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/infrastructure-mep"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/projects/smart-office-mechanical</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/projects/smart-office-mechanical"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/projects/smart-office-mechanical?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/projects/smart-office-mechanical"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/industries</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/industries"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/industries?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/industries"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/mmt</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/mmt"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/mmt?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/mmt"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/technical-office</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/technical-office"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/technical-office?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/technical-office"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/quality</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/quality"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/quality?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/quality"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/careers</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/careers"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/careers?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/careers"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/contact</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/contact?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/contact"/>
+  </url>
+  <url>
+    <loc>https://alnaqeebgroup.vercel.app/quote</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alnaqeebgroup.vercel.app/quote"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alnaqeebgroup.vercel.app/quote?lng=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alnaqeebgroup.vercel.app/quote"/>
+  </url>
+</urlset>
