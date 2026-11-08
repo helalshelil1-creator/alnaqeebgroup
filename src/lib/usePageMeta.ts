@@ -55,8 +55,8 @@ export default function usePageMeta(title: string, description: string) {
     const alreadyBranded = title.includes(BASE) || title.includes(BASE_AR)
     const full = alreadyBranded ? title : (isAr ? `${title} | ${BASE_AR}` : `${title} | ${BASE}`)
     const siteDesc = isAr
-      ? 'شركة مقاولات في مدينة السادس من أكتوبر: أعمال كهربائية، أعمال ميكانيكا، تكييف، مكافحة حريق وإنذار، لوحات تحكم، أنظمة ذكية وصيانة.'
-      : 'Engineering and contracting company in 6th of October City, Egypt: electrical works, mechanical works, HVAC, fire fighting & fire alarm, control panels, ELV & smart systems and maintenance.'
+      ? 'مجموعة النقيب (AL NAQEEB GROUP) — النقيب للمقاولات: شركة مقاولات في مدينة السادس من أكتوبر. المهندس هلال شليل (النقيب هلال) — أعمال كهربائية، أعمال ميكانيكا، تكييف، مكافحة حريق وإنذار، لوحات تحكم، أنظمة ذكية وصيانة.'
+      : 'AL NAQEEB GROUP (النقيب جروب / مجموعة النقيب) — Al Naqeeb for Contracting: engineering & contracting company in 6th of October City, Egypt. Chairman: Eng. Helal Shelil (النقيب هلال). Electrical works, mechanical works, HVAC, fire fighting & fire alarm, control panels, ELV & smart systems, maintenance.'
 
     const desc = description && description.trim().length > 0 ? description : siteDesc
     const img = origin + DEFAULT_IMAGE
