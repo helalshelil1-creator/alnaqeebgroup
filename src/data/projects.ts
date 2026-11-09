@@ -74,7 +74,7 @@ export const projects: Project[] = [
       en: 'Water, drainage and electrical infrastructure for a gated residential community of villas and apartments.',
       ar: 'بنية تحتية للمياه والصرف والكهرباء لمجمع سكني مغلق من الفلل والشقق.',
     },
-    services: ['mechanical-works', 'electrical-works', 'fire-fighting-fire-alarm'],
+    services: ['mechanical-works', 'fire-fighting-fire-alarm'],
     challenge: {
       en: 'Coordinating multiple building types and services within a single community infrastructure plan.',
       ar: 'تنسيق أنواع مبانٍ وخدمات متعددة ضمن مخطط بنية تحتية مجتمعي واحد.',
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       en: 'High- and low-voltage distribution, lighting and standby power for a large-format logistics warehouse.',
       ar: 'توزيع جهد عالٍ ومنخفض وإنارة وطاقة احتياطية لمستودع لوجستي كبير.',
     },
-    services: ['electrical-works', 'control-panels', 'maintenance-testing'],
+    services: ['electrical-works', 'maintenance-testing'],
     challenge: {
       en: 'Providing resilient power and high-bay lighting across a wide, tall single-storey footprint.',
       ar: 'توفير طاقة مرنة وإنارة مرتفعة عبر مساحة واسعة وارتفاع كبير لمبنى طابق واحد.',
@@ -132,7 +132,7 @@ export const projects: Project[] = [
       en: 'Chilled-water plant upgrade and air-distribution rebalance for a busy retail environment.',
       ar: 'ترقية محطة المياه المبردة وإعادة موازنة توزيع الهواء لبيئة تجارة مزدحمة.',
     },
-    services: ['hvac-systems', 'control-panels', 'maintenance-testing'],
+    services: ['hvac-systems', 'maintenance-testing', 'control-panels'],
     challenge: {
       en: 'Improving comfort and efficiency without closing trading areas during peak season.',
       ar: 'تحسين الراحة والكفاءة دون إغلاق مناطق البيع في موسم الذروة.',
@@ -190,7 +190,7 @@ export const projects: Project[] = [
       en: 'Design, fabrication and commissioning of a full suite of MCC, DB and PLC control panels.',
       ar: 'تصميم وتصنيع وتشغيل مجموعة كاملة من لوحات MCC وDB والتحكم PLC.',
     },
-    services: ['control-panels', 'electrical-works', 'hvac-systems'],
+    services: ['control-panels', 'hvac-systems', 'elv-smart-systems'],
     challenge: {
       en: 'Delivering a standardised, maintainable panel suite with reliable integration to site systems.',
       ar: 'تسليم مجموعة لوحات موحدة وقابلة للصيانة بتكامل موثوق مع أنظمة الموقع.',
@@ -219,7 +219,7 @@ export const projects: Project[] = [
       en: 'Mechanical and electrical services for tunnels, pump stations and public infrastructure assets.',
       ar: 'خدمات ميكانيكية وكهربائية للأنفاق ومحطات الضخ وأصول البنية التحتية العامة.',
     },
-    services: ['mechanical-works', 'electrical-works', 'maintenance-testing'],
+    services: ['mechanical-works', 'maintenance-testing'],
     challenge: {
       en: 'Working in live public environments with strict safety and continuity requirements.',
       ar: 'العمل في بيئات عامة حيّة بمتطلبات صارمة للسلامة والاستمرارية.',
@@ -248,7 +248,7 @@ export const projects: Project[] = [
       en: 'Pumping, drainage and water-services retrofit integrated with smart monitoring across an office tower.',
       ar: 'تجديد ضخ وصرف وخدمات مياه مع رصد ذكي عبر برج مكاتب.',
     },
-    services: ['mechanical-works', 'elv-smart-systems', 'maintenance-testing'],
+    services: ['mechanical-works', 'maintenance-testing'],
     challenge: {
       en: 'Modernising aging mechanical services with limited riser access in an occupied tower.',
       ar: 'تحديث خدمات ميكانيكية قديمة مع وصول محدود للمواسير في برج مشغول.',
@@ -277,7 +277,7 @@ export const projects: Project[] = [
       en: 'Complete fire fighting and alarm system installation including sprinkler network, fire pump, and control panels for an industrial facility.',
       ar: 'تركيب نظام مكافحة حريق وإنذار كامل يشمل شبكة رذاذ ومضخة حريق ولوحات تحكم لمنشأة صناعية.',
     },
-    services: ['fire-fighting-fire-alarm', 'control-panels'],
+    services: ['fire-fighting-fire-alarm', 'control-panels', 'electrical-works'],
     challenge: {
       en: 'Delivering a compliant fire protection system in a live industrial environment with strict safety requirements.',
       ar: 'تقديم نظام حماية من الحريق متوافق في بيئة صناعية حية بمتطلبات أمان صارمة.',
@@ -306,7 +306,7 @@ export const projects: Project[] = [
       en: 'ELV and smart building automation including CCTV, access control, BMS integration and structured cabling.',
       ar: 'أتمتة ELV ومبنى ذكي تشمل كاميرات مراقبة وتحكم بالوصول وتكامل BMS وكابلات منظمة.',
     },
-    services: ['elv-smart-systems', 'control-panels'],
+    services: ['elv-smart-systems', 'control-panels', 'electrical-works'],
     challenge: {
       en: 'Integrating multiple low-voltage systems across a multi-floor commercial building with minimal disruption.',
       ar: 'تكامل أنظمة جهد منخفض متعددة عبر مبنى تجاري متعدد الطوابق بأقل تعطيل.',
@@ -335,7 +335,7 @@ export const projects: Project[] = [
       en: 'MEP and ELV systems for highway tunnel and bridge infrastructure including lighting, ventilation and monitoring.',
       ar: 'أنظمة MEP والجهد المنخفض لبنية تحتية للأنفاق والجسور تشمل إضاءة وتهوية ورصد.',
     },
-    services: ['elv-smart-systems', 'electrical-works'],
+    services: ['elv-smart-systems'],
     challenge: {
       en: 'Delivering critical MEP and ELV systems in a live infrastructure environment with strict safety standards.',
       ar: 'تقديم أنظمة MEP والجهد المنخفض حيوية في بيئة بنية تحتية حية بمعايير أمان صارمة.',
