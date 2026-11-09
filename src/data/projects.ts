@@ -45,7 +45,7 @@ export const projects: Project[] = [
       en: 'Integrated electromechanical fit-out for a multi-floor corporate headquarters including electrical, HVAC and control systems.',
       ar: 'تشغيل أعمال كهروميكانيكية متكاملة لمقر رئيسي متعدد الطوابق يشمل أنظمة الكهرباء والتكييف والتحكم.',
     },
-    services: ['hvac-systems', 'control-panels'],
+    services: ['control-panels'],
     challenge: {
       en: 'Delivering a full electromechanical fit-out across occupied floors with minimal disruption to the client’s operations.',
       ar: 'تنفيذ تشغيل أعمال كهروميكانيكية كاملة عبر طوابق مشغولة مع أقل تعطيل لعمليات العميل.',
@@ -434,6 +434,35 @@ export const projects: Project[] = [
     results: {
       en: ['Seamless integration', 'Zero downtime', 'Full commissioning'],
       ar: ['تكامل سلس', 'صفر توقف', 'تشغيل كامل'],
+    },
+  },
+  {
+    slug: 'hvac-system-installation',
+    title: { en: 'HVAC System Installation', ar: 'تركيب نظام تكييف' },
+    category: 'hvac',
+    image: '/img/hvac-project.png',
+    imageAlt: 'HVAC system installation with ductwork and air handling units',
+    imageCaption: 'HVAC System Installation',
+    location: { en: '6th of October City', ar: 'مدينة 6 أكتوبر' },
+    sector: { en: 'Commercial', ar: 'تجاري' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Complete HVAC system installation including ductwork, air handling units and cooling systems.',
+      ar: 'تركيب نظام تكييف كامل يشمل مجاري هواء ووحدات معالجة هواء وأنظمة تبريد.',
+    },
+    services: ['hvac-systems'],
+    challenge: {
+      en: 'Delivering efficient HVAC installation in a commercial building with minimal disruption.',
+      ar: 'تقديم تركيب تكييف فعال في مبنى تجاري بأقل تعطيل.',
+    },
+    solution: {
+      en: 'Phased installation with prefabricated ductwork and systematic commissioning.',
+      ar: 'تركيب مرحلي مع مجاري هواء مسبقة التصنيع وتشغيل منهجي.',
+    },
+    results: {
+      en: ['Optimal climate control', 'Energy efficient', 'On-time delivery'],
+      ar: ['تحكم مناخي مثالي', 'كفاءة طاقة', 'تسليم في الموعد'],
     },
   },
 ]
