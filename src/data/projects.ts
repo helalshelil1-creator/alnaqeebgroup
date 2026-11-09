@@ -74,7 +74,7 @@ export const projects: Project[] = [
       en: 'Water, drainage and electrical infrastructure for a gated residential community of villas and apartments.',
       ar: 'بنية تحتية للمياه والصرف والكهرباء لمجمع سكني مغلق من الفلل والشقق.',
     },
-    services: ['mechanical-works', 'fire-fighting-fire-alarm'],
+    services: ['fire-fighting-fire-alarm'],
     challenge: {
       en: 'Coordinating multiple building types and services within a single community infrastructure plan.',
       ar: 'تنسيق أنواع مبانٍ وخدمات متعددة ضمن مخطط بنية تحتية مجتمعي واحد.',
@@ -219,7 +219,7 @@ export const projects: Project[] = [
       en: 'Mechanical and electrical services for tunnels, pump stations and public infrastructure assets.',
       ar: 'خدمات ميكانيكية وكهربائية للأنفاق ومحطات الضخ وأصول البنية التحتية العامة.',
     },
-    services: ['mechanical-works'],
+    services: ['mechanical-works', 'maintenance-testing'],
     challenge: {
       en: 'Working in live public environments with strict safety and continuity requirements.',
       ar: 'العمل في بيئات عامة حيّة بمتطلبات صارمة للسلامة والاستمرارية.',
@@ -248,7 +248,7 @@ export const projects: Project[] = [
       en: 'Pumping, drainage and water-services retrofit integrated with smart monitoring across an office tower.',
       ar: 'تجديد ضخ وصرف وخدمات مياه مع رصد ذكي عبر برج مكاتب.',
     },
-    services: ['mechanical-works'],
+    services: ['maintenance-testing'],
     challenge: {
       en: 'Modernising aging mechanical services with limited riser access in an occupied tower.',
       ar: 'تحديث خدمات ميكانيكية قديمة مع وصول محدود للمواسير في برج مشغول.',
@@ -550,6 +550,64 @@ export const projects: Project[] = [
     results: {
       en: ['Full compliance', 'Safe systems', 'Documented results'],
       ar: ['امتثال كامل', 'أنظمة آمنة', 'نتائج موثقة'],
+    },
+  },
+  {
+    slug: 'mechanical-electromechanical-works',
+    title: { en: 'Electromechanical Works', ar: 'أعمال كهروميكانيكية' },
+    category: 'mechanical',
+    image: '/img/mechanical-project-1.png',
+    imageAlt: 'Electromechanical works and piping systems',
+    imageCaption: 'Electromechanical Works',
+    location: { en: '6th of October City', ar: 'مدينة 6 أكتوبر' },
+    sector: { en: 'Industrial', ar: 'صناعي' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Electromechanical works including water supply, drainage, pumping stations and plant room installations.',
+      ar: 'أعمال كهروميكانيكية تشمل إمداد مياه وصرف ومحطات ضخ وتركيبات غرف معدات.',
+    },
+    services: ['mechanical-works'],
+    challenge: {
+      en: 'Delivering precision mechanical fabrication in an industrial environment.',
+      ar: 'تقديم fabrication ميكانيكي دقيق في بيئة صناعية.',
+    },
+    solution: {
+      en: 'Prefabricated pipe modules, hydraulic calculations and systematic commissioning.',
+      ar: 'وحدات أنابيب مسبقة التصنيع وحسابات هيدروليكية وتشغيل منهجي.',
+    },
+    results: {
+      en: ['Reliable systems', 'On-time delivery', 'Full commissioning'],
+      ar: ['أنظمة موثوقة', 'تسليم في الموعد', 'تشغيل كامل'],
+    },
+  },
+  {
+    slug: 'mechanical-piping-works',
+    title: { en: 'Mechanical Piping Works', ar: 'أعمال أنابيب ميكانيكية' },
+    category: 'mechanical',
+    image: '/img/mechanical-project-2.png',
+    imageAlt: 'Mechanical piping and valve installation works',
+    imageCaption: 'Mechanical Piping Works',
+    location: { en: 'Cairo', ar: 'القاهرة' },
+    sector: { en: 'Commercial', ar: 'تجاري' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Mechanical piping works including water supply, drainage and valve installations.',
+      ar: 'أعمال أنابيب ميكانيكية تشمل إمداد مياه وصرف وتركيبات صمامات.',
+    },
+    services: ['mechanical-works'],
+    challenge: {
+      en: 'Complex piping routes in a commercial building with limited access.',
+      ar: 'مسارات أنابيب معقدة في مبنى تجاري مع وصول محدود.',
+    },
+    solution: {
+      en: 'Detailed routing plans, pipe fabrication and phased installation.',
+      ar: 'خطط توجيه مفصلة وتصنيع أنابيب وتركيب مرحلي.',
+    },
+    results: {
+      en: ['Clean installation', 'Full testing', 'Client satisfaction'],
+      ar: ['تركيب نظيف', 'اختبار كامل', 'رضا العميل'],
     },
   },
 ]
