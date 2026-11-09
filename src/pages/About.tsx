@@ -95,7 +95,7 @@ export default function About() {
                 {t('about.chairmanDesc')}
               </p>
               <a
-                href="https://hiilal.vercel.app/"
+                href="https://Alnaqeeb-group.vercel.app/"
                 target="_blank"
                 rel="me noopener"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-gold underline-offset-4 transition-colors hover:text-white hover:underline"

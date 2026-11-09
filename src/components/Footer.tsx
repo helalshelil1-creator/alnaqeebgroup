@@ -83,13 +83,13 @@ export default function Footer() {
                   <p className="text-base font-bold text-white">{company.chairman.name[lang]}</p>
                   <p className="text-xs text-white/60">{company.chairman.role[lang]}</p>
                   <a
-                    href="https://hiilal.vercel.app/"
+                    href="https://Alnaqeeb-group.vercel.app/"
                     target="_blank"
                     rel="me noopener"
                     className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-bold text-gold transition-colors hover:text-white"
                   >
                     <ArrowUpRight size={12} />
-                    hiilal.vercel.app
+                    Alnaqeeb-group.vercel.app
                   </a>
                 </div>
               </div>
