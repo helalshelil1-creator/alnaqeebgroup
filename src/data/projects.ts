@@ -262,6 +262,35 @@ export const projects: Project[] = [
       ar: ['توقف مياه أقل', 'كشف مبكر للتسريب', 'تجديد مع إشغال الطوابق'],
     },
   },
+  {
+    slug: 'fire-fighting-system',
+    title: { en: 'Fire Fighting & Alarm System', ar: 'نظام مكافحة حريق وإنذار' },
+    category: 'fire',
+    image: '/img/fire-system.jpg',
+    imageAlt: 'AL NAQEEB GROUP fire fighting and alarm system installation with red piping and control panels',
+    imageCaption: 'Fire Fighting & Alarm System',
+    location: { en: '6th of October City', ar: 'مدينة 6 أكتوبر' },
+    sector: { en: 'Industrial Facility', ar: 'منشأة صناعية' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Complete fire fighting and alarm system installation including sprinkler network, fire pump, and control panels for an industrial facility.',
+      ar: 'تركيب نظام مكافحة حريق وإنذار كامل يشمل شبكة رذاذ ومضخة حريق ولوحات تحكم لمنشأة صناعية.',
+    },
+    services: ['fire-fighting-fire-alarm', 'control-panels'],
+    challenge: {
+      en: 'Delivering a compliant fire protection system in a live industrial environment with strict safety requirements.',
+      ar: 'تقديم نظام حماية من الحريق متوافق في بيئة صناعية حية بمتطلبات أمان صارمة.',
+    },
+    solution: {
+      en: 'Phased installation, fire pump commissioning and integrated alarm panel programming with full testing.',
+      ar: 'تركيب مرحلي وتشغيل مضخة حريق وبرمجة لوحة إنذار متكاملة مع اختبار كامل.',
+    },
+    results: {
+      en: ['NFPA-compliant installation', 'Full system commissioning', 'Zero downtime during works'],
+      ar: ['تركيب متوافق مع NFPA', 'تشغيل كامل للنظام', 'صفر توقف أثناء الأعمال'],
+    },
+  },
 ]
 
 export function getProject(slug: string) {
