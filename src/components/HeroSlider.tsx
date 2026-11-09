@@ -8,7 +8,7 @@ const SLIDES = [
   { image: '/img/hero.jpg', alt: 'Construction site with tower crane and city skyline at dusk' },
   { image: '/img/hero2.jpg', alt: 'Modern highway interchange with traffic and road signs' },
   { image: '/img/hero3.jpg', alt: 'Engineers in safety helmets reviewing construction plans at site' },
-  { image: '/img/proj-commercial.jpg', alt: 'Corporate headquarters building with glass facade' },
+  { image: '/img/hero4.png', alt: 'AL NAQEEB GROUP promotional banner — Building a Greater Tomorrow' },
   { image: '/img/mmt-vehicle.jpg', alt: 'AL NAQEEB GROUP MMT mobile maintenance vehicle on site' },
   { image: '/img/execution-site.jpg', alt: 'Construction site operations with equipment and crews' },
   { image: '/img/ind-infrastructure.jpg', alt: 'Infrastructure and highway interchange works' },
