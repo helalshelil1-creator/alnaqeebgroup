@@ -291,6 +291,64 @@ export const projects: Project[] = [
       ar: ['تركيب متوافق مع NFPA', 'تشغيل كامل للنظام', 'صفر توقف أثناء الأعمال'],
     },
   },
+  {
+    slug: 'smart-building-automation',
+    title: { en: 'Smart Building Automation', ar: 'أتمتة مبنى ذكي' },
+    category: 'control',
+    image: '/img/svc-elv.jpg',
+    imageAlt: 'CCTV security camera, access control terminals, and network rack for smart building systems',
+    imageCaption: 'Smart Building Automation',
+    location: { en: '6th of October City', ar: 'مدينة 6 أكتوبر' },
+    sector: { en: 'Commercial Building', ar: 'مبنى تجاري' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'ELV and smart building automation including CCTV, access control, BMS integration and structured cabling.',
+      ar: 'أتمتة ELV ومبنى ذكي تشمل كاميرات مراقبة وتحكم بالوصول وتكامل BMS وكابلات منظمة.',
+    },
+    services: ['elv-smart-systems', 'control-panels'],
+    challenge: {
+      en: 'Integrating multiple low-voltage systems across a multi-floor commercial building with minimal disruption.',
+      ar: 'تكامل أنظمة جهد منخفض متعددة عبر مبنى تجاري متعدد الطوابق بأقل تعطيل.',
+    },
+    solution: {
+      en: 'Centralized BMS platform, structured cabling backbone and phased floor-by-floor commissioning.',
+      ar: 'منصة BMS مركزية وبنية كابلات منظمة وتشغيل طابقي مرحلي.',
+    },
+    results: {
+      en: ['Unified building control', 'Reduced energy consumption', 'Seamless system integration'],
+      ar: ['تحكم موحد للمبنى', 'استهلاك طاقة أقل', 'تكامل سلس للأنظمة'],
+    },
+  },
+  {
+    slug: 'infrastructure-mep-elv',
+    title: { en: 'Infrastructure MEP & ELV', ar: 'MEP والجهد المنخفض للبنية التحتية' },
+    category: 'infrastructure',
+    image: '/img/ind-infrastructure.jpg',
+    imageAlt: 'Highway interchange, bridge, and tunnel infrastructure with MEP and ELV systems',
+    imageCaption: 'Infrastructure MEP & ELV',
+    location: { en: 'Cairo', ar: 'القاهرة' },
+    sector: { en: 'Infrastructure', ar: 'البنية التحتية' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'MEP and ELV systems for highway tunnel and bridge infrastructure including lighting, ventilation and monitoring.',
+      ar: 'أنظمة MEP والجهد المنخفض لبنية تحتية للأنفاق والجسور تشمل إضاءة وتهوية ورصد.',
+    },
+    services: ['elv-smart-systems', 'electrical-works'],
+    challenge: {
+      en: 'Delivering critical MEP and ELV systems in a live infrastructure environment with strict safety standards.',
+      ar: 'تقديم أنظمة MEP والجهد المنخفض حيوية في بيئة بنية تحتية حية بمعايير أمان صارمة.',
+    },
+    solution: {
+      en: 'Phased installation, redundant systems design and integrated monitoring platform.',
+      ar: 'تركيب مرحلي وتصميم أنظمة احتياطية ومنصة رصد متكاملة.',
+    },
+    results: {
+      en: ['Reliable infrastructure systems', 'Enhanced safety monitoring', 'On-time delivery'],
+      ar: ['أنظمة بنية تحتية موثوقة', 'رصد أمان محسّن', 'تسليم في الموعد'],
+    },
+  },
 ]
 
 export function getProject(slug: string) {
