@@ -19,7 +19,7 @@ export const services: Service[] = [
   {
     slug: 'electrical-works',
     icon: 'Zap',
-    image: '/img/svc-electrical.jpg',
+    image: '/img/electrical.jpg',
     imageAlt: 'Electrical switchgear distribution and control panels in an industrial setting',
     imageCaption: 'Electrical switchgear distribution and control panels in an industrial setting',
     title: { en: 'Electrical Works', ar: 'الأعمال الكهربائية' },
