@@ -45,7 +45,7 @@ export const projects: Project[] = [
       en: 'Integrated electromechanical fit-out for a multi-floor corporate headquarters including electrical, HVAC and control systems.',
       ar: 'تشغيل أعمال كهروميكانيكية متكاملة لمقر رئيسي متعدد الطوابق يشمل أنظمة الكهرباء والتكييف والتحكم.',
     },
-    services: ['electrical-works', 'hvac-systems', 'control-panels'],
+    services: ['hvac-systems', 'control-panels'],
     challenge: {
       en: 'Delivering a full electromechanical fit-out across occupied floors with minimal disruption to the client’s operations.',
       ar: 'تنفيذ تشغيل أعمال كهروميكانيكية كاملة عبر طوابق مشغولة مع أقل تعطيل لعمليات العميل.',
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       en: 'High- and low-voltage distribution, lighting and standby power for a large-format logistics warehouse.',
       ar: 'توزيع جهد عالٍ ومنخفض وإنارة وطاقة احتياطية لمستودع لوجستي كبير.',
     },
-    services: ['electrical-works', 'maintenance-testing'],
+    services: ['maintenance-testing'],
     challenge: {
       en: 'Providing resilient power and high-bay lighting across a wide, tall single-storey footprint.',
       ar: 'توفير طاقة مرنة وإنارة مرتفعة عبر مساحة واسعة وارتفاع كبير لمبنى طابق واحد.',
@@ -161,7 +161,7 @@ export const projects: Project[] = [
       en: 'Full sprinkler, hydrant and addressable fire-alarm installation with clean-agent protection for critical rooms.',
       ar: 'تركيب كامل للمرشات وخطوط المياه وإنذار قابل للعنونة مع غاز نظيف للغرف الحساسة.',
     },
-    services: ['fire-fighting-fire-alarm', 'control-panels', 'electrical-works'],
+    services: ['fire-fighting-fire-alarm', 'control-panels'],
     challenge: {
       en: 'Protecting a mixed-use building with varied occupancy risks and sensitive equipment rooms.',
       ar: 'حماية مبنى متعدد الاستخدامات بمخاطر إشغال متنوعة وغرف معدات حساسة.',
@@ -277,7 +277,7 @@ export const projects: Project[] = [
       en: 'Complete fire fighting and alarm system installation including sprinkler network, fire pump, and control panels for an industrial facility.',
       ar: 'تركيب نظام مكافحة حريق وإنذار كامل يشمل شبكة رذاذ ومضخة حريق ولوحات تحكم لمنشأة صناعية.',
     },
-    services: ['fire-fighting-fire-alarm', 'control-panels', 'electrical-works'],
+    services: ['fire-fighting-fire-alarm', 'control-panels'],
     challenge: {
       en: 'Delivering a compliant fire protection system in a live industrial environment with strict safety requirements.',
       ar: 'تقديم نظام حماية من الحريق متوافق في بيئة صناعية حية بمتطلبات أمان صارمة.',
@@ -306,7 +306,7 @@ export const projects: Project[] = [
       en: 'ELV and smart building automation including CCTV, access control, BMS integration and structured cabling.',
       ar: 'أتمتة ELV ومبنى ذكي تشمل كاميرات مراقبة وتحكم بالوصول وتكامل BMS وكابلات منظمة.',
     },
-    services: ['elv-smart-systems', 'control-panels', 'electrical-works'],
+    services: ['elv-smart-systems', 'control-panels'],
     challenge: {
       en: 'Integrating multiple low-voltage systems across a multi-floor commercial building with minimal disruption.',
       ar: 'تكامل أنظمة جهد منخفض متعددة عبر مبنى تجاري متعدد الطوابق بأقل تعطيل.',
@@ -347,6 +347,93 @@ export const projects: Project[] = [
     results: {
       en: ['Reliable infrastructure systems', 'Enhanced safety monitoring', 'On-time delivery'],
       ar: ['أنظمة بنية تحتية موثوقة', 'رصد أمان محسّن', 'تسليم في الموعد'],
+    },
+  },
+  {
+    slug: 'electrical-panel-installation',
+    title: { en: 'Electrical Panel Installation', ar: 'تركيب لوحات كهربائية' },
+    category: 'electrical',
+    image: '/img/electrical-project-1.png',
+    imageAlt: 'Electrical panel installation and wiring works',
+    imageCaption: 'Electrical Panel Installation',
+    location: { en: '6th of October City', ar: 'مدينة 6 أكتوبر' },
+    sector: { en: 'Commercial', ar: 'تجاري' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Complete electrical panel installation including distribution boards, cable management and testing.',
+      ar: 'تركيب كامل للوحات كهربائية يشمل لوحات توزيع وإدارة كابلات واختبار.',
+    },
+    services: ['electrical-works'],
+    challenge: {
+      en: 'Delivering high-quality electrical panel installation within a tight project schedule.',
+      ar: 'تقديم تركيب لوحات كهربائية عالية الجودة ضمن جدول مشروع ضيق.',
+    },
+    solution: {
+      en: 'Phased installation with prefabricated panels and systematic testing protocol.',
+      ar: 'تركيب مرحلي مع لوحات مسبقة التصنيع وبروتوكول اختبار منهجي.',
+    },
+    results: {
+      en: ['On-time delivery', 'Full compliance testing', 'Zero defects'],
+      ar: ['تسليم في الموعد', 'اختبار امتثال كامل', 'صفر عيوب'],
+    },
+  },
+  {
+    slug: 'electrical-wiring-works',
+    title: { en: 'Electrical Wiring Works', ar: 'أعمال توصيل كهربائي' },
+    category: 'electrical',
+    image: '/img/electrical-project-2.png',
+    imageAlt: 'Electrical wiring and cable installation works',
+    imageCaption: 'Electrical Wiring Works',
+    location: { en: 'New Cairo', ar: 'القاهرة الجديدة' },
+    sector: { en: 'Residential', ar: 'سكني' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Comprehensive electrical wiring works including cable containment, tray systems and earthing.',
+      ar: 'أعمال توصيل كهربائي شاملة تشمل احتواء كابلات وأنظمة صواني وتأريض.',
+    },
+    services: ['electrical-works'],
+    challenge: {
+      en: 'Managing complex wiring routes in a multi-floor residential building.',
+      ar: 'إدارة مسارات توصيل معقدة في مبنى سكني متعدد الطوابق.',
+    },
+    solution: {
+      en: 'Detailed routing plans, cable tray systems and phased floor-by-floor installation.',
+      ar: 'خطط توجيه مفصلة وأنظمة صواني كابلات وتركيب طابقي مرحلي.',
+    },
+    results: {
+      en: ['Clean cable management', 'Full test certification', 'Client satisfaction'],
+      ar: ['إدارة كابلات نظيفة', 'شهادة اختبار كاملة', 'رضا العميل'],
+    },
+  },
+  {
+    slug: 'electrical-system-installation',
+    title: { en: 'Electrical System Installation', ar: 'تركيب نظام كهربائي' },
+    category: 'electrical',
+    image: '/img/electrical-project-3.png',
+    imageAlt: 'Electrical system installation and commissioning',
+    imageCaption: 'Electrical System Installation',
+    location: { en: 'Cairo', ar: 'القاهرة' },
+    sector: { en: 'Industrial', ar: 'صناعي' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Full electrical system installation including HV/LV distribution, lighting and power systems.',
+      ar: 'تركيب نظام كهربائي كامل يشمل توزيع HV/LV وإضاءة وأنظمة طاقة.',
+    },
+    services: ['electrical-works'],
+    challenge: {
+      en: 'Integrating electrical systems in an industrial facility with minimal operational disruption.',
+      ar: 'تكامل أنظمة كهربائية في منشأة صناعية بأقل تعطيل تشغيلي.',
+    },
+    solution: {
+      en: 'Off-hours installation, redundant power paths and comprehensive commissioning tests.',
+      ar: 'تركيب خارج ساعات العمل ومسارات طاقة احتياطية واختبارات تشغيل شاملة.',
+    },
+    results: {
+      en: ['Seamless integration', 'Zero downtime', 'Full commissioning'],
+      ar: ['تكامل سلس', 'صفر توقف', 'تشغيل كامل'],
     },
   },
 ]
