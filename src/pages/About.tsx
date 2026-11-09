@@ -103,6 +103,15 @@ export default function About() {
                 <ExternalLink size={15} />
                 {lang === 'ar' ? 'مكتب المهندس هلال شليل — الهندسة الكهربائية والأعمال الكهروميكانيكية' : 'Eng. Helal Shelil — Electrical & Electromechanical Engineering Office'}
               </a>
+              <a
+                href="https://hiilal.vercel.app/"
+                target="_blank"
+                rel="me noopener"
+                className="mt-2 inline-flex items-center gap-2 text-xs font-medium text-white/60 underline-offset-4 transition-colors hover:text-gold hover:underline"
+              >
+                <ExternalLink size={12} />
+                {lang === 'ar' ? 'المنصة الهندسية الشخصية — hiilal.vercel.app' : 'Personal Engineering Platform — hiilal.vercel.app'}
+              </a>
             </div>
           </Reveal>
         </div>

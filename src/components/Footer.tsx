@@ -91,6 +91,15 @@ export default function Footer() {
                     <ArrowUpRight size={12} />
                     Alnaqeeb-group.vercel.app
                   </a>
+                  <a
+                    href="https://hiilal.vercel.app/"
+                    target="_blank"
+                    rel="me noopener"
+                    className="mt-1 inline-flex items-center gap-1 text-[10px] font-medium text-white/50 transition-colors hover:text-gold"
+                  >
+                    <ArrowUpRight size={10} />
+                    hiilal.vercel.app
+                  </a>
                 </div>
               </div>
             </div>
