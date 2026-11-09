@@ -410,6 +410,9 @@ export default function Home() {
                 {t('nav.contact')}
               </Link>
             </div>
+            <div className="relative mt-10 overflow-hidden rounded-2xl shadow-lift">
+              <img src="/img/we.png" alt="AL NAQEEB GROUP" className="h-auto w-full object-cover" />
+            </div>
           </Reveal>
         </div>
       </section>
