@@ -151,7 +151,7 @@ export const services: Service[] = [
   {
     slug: 'maintenance-testing',
     icon: 'Wrench',
-    image: '/img/svc-maintenance.jpg',
+    image: '/img/svc-maintenance.png',
     imageAlt: 'Maintenance technician with multimeter, diagnostic tools, and safety equipment',
     imageCaption: 'Maintenance technician with multimeter, diagnostic tools, and safety equipment',
     title: { en: 'Maintenance & Testing', ar: 'الصيانة والاختبار' },
