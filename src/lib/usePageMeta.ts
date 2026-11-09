@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 const BASE = 'AL NAQEEB GROUP'
 const BASE_AR = 'النقيب جروب للمقاولات الهندسية'
 const SITE_NAME = 'AL NAQEEB GROUP | النقيب جروب للمقاولات الهندسية'
-const DEFAULT_IMAGE = '/img/hero.jpg'
+const DEFAULT_IMAGE = '/img/favicon.png'
 
 function setMeta(attr: 'name' | 'property', key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`)
