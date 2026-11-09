@@ -8,4 +8,4 @@ Disallow: /quote?
 User-agent: *
 Allow: /?lng=ar
 
-Sitemap: https://alnaqeebgroup.vercel.app/sitemap.xml
+Sitemap: https://Alnaqeeb-group.vercel.app/sitemap.xml

@@ -203,7 +203,7 @@ alnaqeeb-website/
 - JSON-LD: `Organization` + `WebSite` + `Person` + `BreadcrumbList`
 - `sitemap.xml` (26 رابط) + `robots.txt`
 - صورة المشاركة: `/img/hero.jpg`
-- النطاق الرسمي: `https://alnaqeebgroup.vercel.app`
+- النطاق الرسمي: `https://Alnaqeeb-group.vercel.app`
 
 ---
 
