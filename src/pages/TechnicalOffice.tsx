@@ -19,7 +19,7 @@ export default function TechnicalOffice() {
   const captions = t('office.galleryCaptions', { returnObjects: true }) as string[]
 
   const gallery = [
-    { src: '/img/office-design.jpg', caption: captions[0] },
+    { src: '/img/office-design.png', caption: captions[0] },
     { src: '/img/office-mep.jpg', caption: captions[1] },
     { src: '/img/hero2.jpg', caption: captions[2] },
   ]
@@ -31,7 +31,7 @@ export default function TechnicalOffice() {
         title={t('office.title')}
         description={t('office.desc')}
         crumb={t('nav.home')}
-        image="/img/office-design.jpg"
+        image="/img/office-design.png"
       />
 
       {/* Technical services */}

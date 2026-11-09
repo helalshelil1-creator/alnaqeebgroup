@@ -49,7 +49,7 @@ export default function Home() {
   const hqImages = [
     { src: '/img/hq-office.jpg', alt: 'Executive office and design studio at AL NAQEEB GROUP headquarters' },
     { src: '/img/about.jpg', alt: 'AL NAQEEB GROUP headquarters exterior with corporate branding' },
-    { src: '/img/office-design.jpg', alt: 'Design and technical office with modern workstations' },
+    { src: '/img/office-design.png', alt: 'Design and technical office with modern workstations' },
   ]
 
   return (
@@ -167,7 +167,7 @@ export default function Home() {
         eyebrow={t('home.officeEyebrow')}
         title={t('home.officeTitle')}
         desc={t('home.officeDesc')}
-        image="/img/office-design.jpg"
+        image="/img/office-design.png"
         alt="Design and technical office with modern workstations and project models"
         items={officeItems.slice(0, 8)}
         linkTo="/technical-office"
