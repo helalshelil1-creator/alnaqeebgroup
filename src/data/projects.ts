@@ -103,7 +103,7 @@ export const projects: Project[] = [
       en: 'High- and low-voltage distribution, lighting and standby power for a large-format logistics warehouse.',
       ar: 'توزيع جهد عالٍ ومنخفض وإنارة وطاقة احتياطية لمستودع لوجستي كبير.',
     },
-    services: ['maintenance-testing'],
+    services: ['electrical-works'],
     challenge: {
       en: 'Providing resilient power and high-bay lighting across a wide, tall single-storey footprint.',
       ar: 'توفير طاقة مرنة وإنارة مرتفعة عبر مساحة واسعة وارتفاع كبير لمبنى طابق واحد.',
@@ -132,7 +132,7 @@ export const projects: Project[] = [
       en: 'Chilled-water plant upgrade and air-distribution rebalance for a busy retail environment.',
       ar: 'ترقية محطة المياه المبردة وإعادة موازنة توزيع الهواء لبيئة تجارة مزدحمة.',
     },
-    services: ['hvac-systems', 'maintenance-testing', 'control-panels'],
+    services: ['hvac-systems', 'control-panels'],
     challenge: {
       en: 'Improving comfort and efficiency without closing trading areas during peak season.',
       ar: 'تحسين الراحة والكفاءة دون إغلاق مناطق البيع في موسم الذروة.',
@@ -219,7 +219,7 @@ export const projects: Project[] = [
       en: 'Mechanical and electrical services for tunnels, pump stations and public infrastructure assets.',
       ar: 'خدمات ميكانيكية وكهربائية للأنفاق ومحطات الضخ وأصول البنية التحتية العامة.',
     },
-    services: ['mechanical-works', 'maintenance-testing'],
+    services: ['mechanical-works'],
     challenge: {
       en: 'Working in live public environments with strict safety and continuity requirements.',
       ar: 'العمل في بيئات عامة حيّة بمتطلبات صارمة للسلامة والاستمرارية.',
@@ -248,7 +248,7 @@ export const projects: Project[] = [
       en: 'Pumping, drainage and water-services retrofit integrated with smart monitoring across an office tower.',
       ar: 'تجديد ضخ وصرف وخدمات مياه مع رصد ذكي عبر برج مكاتب.',
     },
-    services: ['mechanical-works', 'maintenance-testing'],
+    services: ['mechanical-works'],
     challenge: {
       en: 'Modernising aging mechanical services with limited riser access in an occupied tower.',
       ar: 'تحديث خدمات ميكانيكية قديمة مع وصول محدود للمواسير في برج مشغول.',
@@ -463,6 +463,93 @@ export const projects: Project[] = [
     results: {
       en: ['Optimal climate control', 'Energy efficient', 'On-time delivery'],
       ar: ['تحكم مناخي مثالي', 'كفاءة طاقة', 'تسليم في الموعد'],
+    },
+  },
+  {
+    slug: 'fault-repair-maintenance',
+    title: { en: 'Fault Repair & Maintenance', ar: 'إصلاح الأعطال والصيانة' },
+    category: 'maintenance',
+    image: '/img/maintenance-project-1.png',
+    imageAlt: 'Fault repair and maintenance work on electrical equipment',
+    imageCaption: 'Fault Repair & Maintenance',
+    location: { en: '6th of October City', ar: 'مدينة 6 أكتوبر' },
+    sector: { en: 'Commercial', ar: 'تجاري' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Reactive fault repair and maintenance for electrical and mechanical building systems.',
+      ar: 'إصلاح أعطال تفاعلي وصيانة لأنظمة المباني الكهربائية والميكانيكية.',
+    },
+    services: ['maintenance-testing'],
+    challenge: {
+      en: 'Rapid response to equipment failures with minimal downtime for the client.',
+      ar: 'استجابة سريعة ل أعطال المعدات بأقل توقف للعميل.',
+    },
+    solution: {
+      en: '24/7 helpdesk, rapid dispatch and on-site diagnostic and repair protocols.',
+      ar: 'مكتب مساعدة 24/7 وإرسال سريع وبروتوكولات تشخيص وإصلاح في الموقع.',
+    },
+    results: {
+      en: ['Fast response time', 'Minimal downtime', 'Full system restoration'],
+      ar: ['وقت استجابة سريع', 'أقل توقف', 'استعادة كاملة للنظام'],
+    },
+  },
+  {
+    slug: 'fault-detection-inspection',
+    title: { en: 'Fault Detection & Inspection', ar: 'اكتشاف الأعطال والفحص' },
+    category: 'maintenance',
+    image: '/img/maintenance-project-2.png',
+    imageAlt: 'Fault detection and inspection of industrial equipment',
+    imageCaption: 'Fault Detection & Inspection',
+    location: { en: 'New Cairo', ar: 'القاهرة الجديدة' },
+    sector: { en: 'Industrial', ar: 'صناعي' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Thermographic surveys and fault detection for electrical and mechanical systems.',
+      ar: 'مسوحات حرارية واكتشاف أعطال لأنظمة كهربائية وميكانيكية.',
+    },
+    services: ['maintenance-testing'],
+    challenge: {
+      en: 'Identifying hidden faults in complex industrial electrical systems.',
+      ar: 'تحديد أعطال مخفية في أنظمة كهربائية صناعية معقدة.',
+    },
+    solution: {
+      en: 'Thermographic imaging, insulation testing and comprehensive condition assessment.',
+      ar: 'تصوير حراري واختبار عزل وتقييم حالة شامل.',
+    },
+    results: {
+      en: ['Early fault detection', 'Preventive action', 'Reduced failures'],
+      ar: ['اكتشاف مبكر للأعطال', 'إجراء وقائي', 'تقليل الأعطال'],
+    },
+  },
+  {
+    slug: 'fault-detection-testing',
+    title: { en: 'Fault Detection & Testing', ar: 'اكتشاف الأعطال والاختبار' },
+    category: 'maintenance',
+    image: '/img/maintenance-project-3.png',
+    imageAlt: 'Fault detection and testing of building systems',
+    imageCaption: 'Fault Detection & Testing',
+    location: { en: 'Cairo', ar: 'القاهرة' },
+    sector: { en: 'Commercial', ar: 'تجاري' },
+    year: '2024',
+    status: { en: 'Completed', ar: 'مكتمل' },
+    summary: {
+      en: 'Comprehensive fault detection and testing for building electrical and mechanical systems.',
+      ar: 'اكتشاف أعطال واختبار شامل لأنظمة المباني الكهربائية والميكانيكية.',
+    },
+    services: ['maintenance-testing'],
+    challenge: {
+      en: 'Ensuring all building systems meet compliance and safety standards.',
+      ar: 'ضمان استيفاء جميع أنظمة المباني لمعايير الامتثال والسلامة.',
+    },
+    solution: {
+      en: 'Statutory testing, compliance reporting and performance monitoring.',
+      ar: 'اختبار قانوني وتقارير امتثال ورصد أداء.',
+    },
+    results: {
+      en: ['Full compliance', 'Safe systems', 'Documented results'],
+      ar: ['امتثال كامل', 'أنظمة آمنة', 'نتائج موثقة'],
     },
   },
 ]
