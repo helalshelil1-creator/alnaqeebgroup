@@ -55,6 +55,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+      <h1 className="sr-only">AL NAQEEB GROUP — النقيب جروب للمقاولات الهندسية | Electrical, Mechanical, HVAC, Fire Fighting, Control Panels, ELV, Maintenance | 6th of October City, Egypt | Chairman: Eng. Helal Shelil</h1>
 
       {/* Disciplines ticker */}
       <div className="border-y border-navy/5 bg-white py-5">
