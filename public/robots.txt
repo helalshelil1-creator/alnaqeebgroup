@@ -1,11 +1,4 @@
-# AL NAQEEB GROUP — allow full crawling
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /quote?
-
-# Index the English and Arabic versions of every page
-User-agent: *
-Allow: /?lng=ar
 
 Sitemap: https://Alnaqeeb-group.vercel.app/sitemap.xml
