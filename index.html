@@ -343,31 +343,6 @@
     <script type="module" src="/src/main.tsx"></script>
 
     <!-- Fix absolute URLs once deployed on the real domain -->
-    <script>
-      (function () {
-        var o = window.location.origin;
-        var map = {
-          'link[rel="canonical"]': o + '/',
-          'link[rel="alternate"][hreflang="en"]': o + '/',
-          'link[rel="alternate"][hreflang="ar"]': o + '/?lng=ar',
-          'link[rel="alternate"][hreflang="ar-eg"]': o + '/?lng=ar',
-          'link[rel="alternate"][hreflang="x-default"]': o + '/',
-          'meta[property="og:url"]': o + '/',
-          'meta[property="og:image"]': o + '/img/favicon.png',
-          'meta[name="twitter:image"]': o + '/img/favicon.png'
-        };
-        Object.keys(map).forEach(function (sel) {
-          var el = document.head.querySelector(sel);
-          if (el && map[sel]) el.setAttribute(el.hasAttribute('href') ? 'href' : 'content', map[sel]);
-        });
-        // Rewrite structured data so Organization/Person/WebSite point at the live domain
-        document.querySelectorAll('script[type="application/ld+json"]').forEach(function (s) {
-          try {
-            var txt = s.textContent || '';
-            s.textContent = txt.split('https://Alnaqeeb-group.vercel.app').join(o);
-          } catch (e) { /* ignore */ }
-        });
-      })();
-    </script>
+    
   </body>
 </html>
