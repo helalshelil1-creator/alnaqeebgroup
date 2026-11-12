@@ -19,32 +19,32 @@ const AUTOPLAY_MS = 6500
 export default function HeroSlider() {
   const { t } = useTranslation()
   const [i, setI] = useState(0)
-  const [dir, setDir] = useState(1)
+  const [dir, setDir] = useState<1 | -1>(1)
   const timer = useRef<number | null>(null)
 
-  const go = useCallback((next: number, d: number) => {
+  const go = useCallback((next: number, d: 1 | -1) => {
     setDir(d)
     setI((next + SLIDES.length) % SLIDES.length)
+  }, [])
+
+  const resetAutoplay = useCallback(() => {
+    if (timer.current) clearInterval(timer.current)
+
+    timer.current = window.setInterval(() => {
+      setI((p) => (p + 1) % SLIDES.length)
+      setDir(1)
+    }, AUTOPLAY_MS)
   }, [])
 
   const next = () => go(i + 1, 1)
   const prev = () => go(i - 1, -1)
 
   useEffect(() => {
-    timer.current = window.setInterval(() => {
-      setI((p) => (p + 1) % SLIDES.length)
-      setDir(1)
-    }, AUTOPLAY_MS)
-    return () => { if (timer.current) clearInterval(timer.current) }
-  }, [])
-
-  const restart = () => {
-    if (timer.current) clearInterval(timer.current)
-    timer.current = window.setInterval(() => {
-      setI((p) => (p + 1) % SLIDES.length)
-      setDir(1)
-    }, AUTOPLAY_MS)
-  }
+    resetAutoplay()
+    return () => {
+      if (timer.current) clearInterval(timer.current)
+    }
+  }, [resetAutoplay])
 
   const title1 = t('hero.title1')
   const title2 = t('hero.title2')
@@ -56,9 +56,9 @@ export default function HeroSlider() {
         <motion.div
           key={i}
           className="absolute inset-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0, x: dir > 0 ? 72 : -72 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: dir > 0 ? -72 : 72 }}
           transition={{ duration: 0.9, ease: 'easeInOut' }}
         >
           <motion.img
@@ -165,14 +165,20 @@ export default function HeroSlider() {
 
       {/* Arrows */}
       <button
-        onClick={() => { prev(); restart() }}
+        onClick={() => {
+          prev()
+          resetAutoplay()
+        }}
         aria-label={t('hero.prev')}
         className="absolute start-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy sm:grid"
       >
         <ChevronLeft size={22} />
       </button>
       <button
-        onClick={() => { next(); restart() }}
+        onClick={() => {
+          next()
+          resetAutoplay()
+        }}
         aria-label={t('hero.next')}
         className="absolute end-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy sm:grid"
       >
@@ -184,7 +190,10 @@ export default function HeroSlider() {
         {SLIDES.map((_, idx) => (
           <button
             key={idx}
-            onClick={() => { go(idx, idx > i ? 1 : -1); restart() }}
+            onClick={() => {
+              go(idx, idx > i ? 1 : -1)
+              resetAutoplay()
+            }}
             aria-label={`Slide ${idx + 1}`}
             className={`h-2.5 rounded-full transition-all duration-300 ${
               idx === i ? 'w-8 bg-gold' : 'w-2.5 bg-white/40 hover:bg-white/70'
