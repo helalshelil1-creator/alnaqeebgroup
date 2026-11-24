@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { CheckCircle2, AlertTriangle, Info } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import type { SubmissionResult } from '../lib/forms'
+import PdfActions from './PdfActions'
 
 export default function FormStatus({
   result,
@@ -47,6 +48,7 @@ export default function FormStatus({
                 <p className="font-bold text-amber-800">{t('forms.waTitle')}</p>
                 <p className="text-sm text-amber-700">{t('forms.waNote')}</p>
                 <a href={result.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-bold text-navy underline">{t('forms.waOpen')}</a>
+                {__EDITION__ !== 'personal' && result.pdf && <PdfActions payload={result.pdf} />}
               </div>
             </div>
           )}

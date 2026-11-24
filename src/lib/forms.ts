@@ -22,6 +22,7 @@ export interface SubmissionResult {
   mode: 'sent' | 'unconfigured' | 'error' | 'whatsapp' | 'demo'
   message?: string
   url?: string
+  pdf?: { title: string; rows: [string, string][]; lang: string }
 }
 
 let runtimeConfig: { formEndpoint?: string } | null = null
@@ -56,6 +57,17 @@ const LABELS: Record<string, { en: string; ar: string }> = {
 }
 
 /** Build a wa.me link with the form content prefilled. Nothing is sent until the user presses send in WhatsApp. */
+export function buildPdfPayload(type: FormType, data: Record<string, unknown>, lang: string) {
+  const l = lang === 'ar' ? 'ar' : 'en'
+  const title = type === 'quote'
+    ? (l === 'ar' ? 'طلب عرض سعر - مجموعة النقيب' : 'Quotation request - AL NAQEEB GROUP')
+    : (l === 'ar' ? 'رسالة تواصل - مجموعة النقيب' : 'Contact message - AL NAQEEB GROUP')
+  const rows = Object.entries(data)
+    .filter(([, v]) => typeof v === 'string' && v.trim())
+    .map(([k, v]) => [LABELS[k]?.[l] ?? k, String(v).trim()] as [string, string])
+  return { title, rows, lang: l }
+}
+
 export function buildWhatsAppUrl(type: FormType, data: Record<string, unknown>, lang: string): string {
   const l = lang === 'ar' ? 'ar' : 'en'
   const head = type === 'quote'
@@ -81,7 +93,7 @@ export async function submitForm(
   if (!endpoint && (type === 'contact' || type === 'quote')) {
     const url = buildWhatsAppUrl(type, display ?? data, lang)
     try { window.open(url, '_blank', 'noopener') } catch { /* link shown in the status box */ }
-    return { ok: false, mode: 'whatsapp', url }
+    return { ok: false, mode: 'whatsapp', url, pdf: buildPdfPayload(type, display ?? data, lang) }
   }
 
   if (!endpoint) {
