@@ -27,6 +27,7 @@ export const projectCategories = [
   { key: 'fire', label: { en: 'Fire Fighting Systems', ar: 'أنظمة مكافحة الحريق' } },
   { key: 'control', label: { en: 'Control Panels', ar: 'لوحات التحكم' } },
   { key: 'infrastructure', label: { en: 'Infrastructure', ar: 'البنية التحتية' } },
+  { key: 'maintenance', label: { en: 'Maintenance Projects', ar: 'مشاريع صيانة' } },
 ]
 
 export const projects: Project[] = [
