@@ -17,7 +17,7 @@ export default function PdfActions({ payload }: { payload: Payload }) {
   const blob = useRef<Blob | null>(null)
   const mod = useRef<typeof import('../lib/pdfShare') | null>(null)
   const [canShare, setCanShare] = useState(false)
-  const name = `${payload.lang === 'ar' ? 'talab' : 'request'}-alnaqeeb-${new Date().toISOString().slice(0, 10)}.pdf`
+  const name = `${payload.lang === 'ar' ? 'talab' : 'request'}-alnaqeeb-${new Date().toLocaleDateString('en-CA')}.pdf`
 
   useEffect(() => {
     let dead = false

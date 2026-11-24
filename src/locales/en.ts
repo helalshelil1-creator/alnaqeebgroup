@@ -290,6 +290,7 @@ export default {
     uploadCv: 'Upload CV',
     additional: 'Additional Information',
     requiredService: 'Required Service',
+    moreServices: 'Other requested services (optional)',
     projectLocation: 'Project Location',
     projectType: 'Project Type',
     budget: 'Estimated Budget (Optional)',

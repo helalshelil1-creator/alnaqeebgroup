@@ -51,7 +51,7 @@ const LABELS: Record<string, { en: string; ar: string }> = {
   fullName: { en: 'Name', ar: 'الاسم' }, company: { en: 'Company', ar: 'الشركة' },
   email: { en: 'Email', ar: 'البريد' }, phone: { en: 'Phone', ar: 'الهاتف' },
   subject: { en: 'Subject', ar: 'الموضوع' }, message: { en: 'Message', ar: 'الرسالة' },
-  service: { en: 'Service', ar: 'الخدمة' }, location: { en: 'Location', ar: 'الموقع' },
+  service: { en: 'Service', ar: 'الخدمة' }, moreServices: { en: 'Other requested services', ar: 'خدمات أخرى مطلوبة' }, location: { en: 'Location', ar: 'الموقع' },
   projectType: { en: 'Project type', ar: 'نوع المشروع' }, budget: { en: 'Budget', ar: 'الميزانية' },
   description: { en: 'Description', ar: 'الوصف' }, attachmentName: { en: 'File name (not attached)', ar: 'اسم الملف (غير مرفق)' },
 }

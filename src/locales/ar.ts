@@ -290,6 +290,7 @@ export default {
     uploadCv: 'رفع السيرة الذاتية',
     additional: 'معلومات إضافية',
     requiredService: 'الخدمة المطلوبة',
+    moreServices: 'خدمات أخرى مطلوبة (اختياري)',
     projectLocation: 'موقع المشروع',
     projectType: 'نوع المشروع',
     budget: 'الميزانية التقديرية (اختياري)',

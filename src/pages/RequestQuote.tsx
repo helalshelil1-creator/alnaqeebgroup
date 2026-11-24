@@ -20,7 +20,7 @@ export default function RequestQuote() {
 
   const form = useForm(
     'quote',
-    { fullName: '', company: '', email: '', phone: '', service: '', location: '', projectType: '', budget: '', description: '' },
+    { fullName: '', company: '', email: '', phone: '', service: '', moreServices: '', location: '', projectType: '', budget: '', description: '' },
     ['fullName', 'email', 'phone', 'service', 'location', 'projectType', 'description'],
     'forms.successQuote',
     (v, l) => {
@@ -36,6 +36,9 @@ export default function RequestQuote() {
       return {
         ...v,
         service: services.find((s) => s.slug === v.service)?.title[k] ?? v.service,
+        moreServices: v.moreServices
+          .split(',').filter((x) => x && x !== v.service)
+          .map((slug) => services.find((s) => s.slug === slug)?.title[k] ?? slug).join(k === 'ar' ? '، ' : ', '),
         projectType: pt[v.projectType]?.[k] ?? v.projectType,
         budget: bd[v.budget]?.[k] ?? v.budget,
       }
@@ -85,6 +88,24 @@ export default function RequestQuote() {
                 placeholder={t('forms.choose')}
                 options={services.map((s) => ({ value: s.slug, label: s.title[lang] }))}
               />
+              <fieldset className="sm:col-span-2" data-testid="more-services">
+                <legend className="field-label">{t('forms.moreServices')}</legend>
+                <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                  {services.filter((s) => s.slug !== form.values.service).map((s) => {
+                    const on = form.values.moreServices.split(',').includes(s.slug)
+                    return (
+                      <label key={s.slug} className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm ${on ? 'border-gold bg-gold/10 font-semibold text-ink' : 'border-slate-200 bg-white text-muted'}`}>
+                        <input type="checkbox" className="h-4 w-4 accent-[#062B52]" checked={on}
+                          onChange={() => {
+                            const cur = form.values.moreServices.split(',').filter(Boolean)
+                            form.setField('moreServices', (on ? cur.filter((x) => x !== s.slug) : [...cur, s.slug]).join(','))
+                          }} />
+                        {s.title[lang]}
+                      </label>
+                    )
+                  })}
+                </div>
+              </fieldset>
               <Field label={t('forms.projectLocation')} name="location" required value={form.values.location} onChange={(v) => form.setField('location', v)} error={form.errors.location} />
               <Field
                 label={t('forms.projectType')} name="projectType" type="select" required
