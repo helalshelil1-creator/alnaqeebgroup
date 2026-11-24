@@ -4,7 +4,7 @@ import {
   Mail, Phone, MapPin, Clock, Linkedin, Instagram, Facebook, Twitter,
   ArrowUpRight, ShieldCheck,
 } from 'lucide-react'
-import { company, contact } from '../data/site'
+import { company, contact, siteOrigin, siteHost } from '../data/site'
 import { services } from '../data/services'
 import { pickLoc } from '../lib/useLoc'
 
@@ -84,13 +84,13 @@ export default function Footer() {
                   <p className="text-xs text-white/60">{company.chairman.role[lang]}</p>
                   <p className="text-xs text-white/60">{company.chairman.extraRole[lang]}</p>
                   <a
-                    href="https://Alnaqeeb-group.vercel.app/"
+                    href={`${siteOrigin}/`}
                     target="_blank"
                     rel="me noopener"
                     className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-bold text-gold transition-colors hover:text-white"
                   >
                     <ArrowUpRight size={12} />
-                    Alnaqeeb-group.vercel.app
+                    {siteHost}
                   </a>
                   <a
                     href="https://hiilal.vercel.app/"

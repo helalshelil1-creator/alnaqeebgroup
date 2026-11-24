@@ -118,7 +118,7 @@ export default {
     placeholderNote: 'Contact details shown are placeholders pending verified company information.',
   },
   page: {
-    homeTitle: 'Contracting Company in Egypt',
+    homeTitle: 'Eng. Helal Shelil | AL NAQEEB GROUP, Contracting Company in Egypt',
     homeDesc: 'AL NAQEEB GROUP (مجموعة النقيب) is a contracting company in 6th of October City, Egypt. Electrical works, mechanical works, HVAC systems, fire fighting & fire alarm, control panels, ELV & smart systems, and maintenance & testing — delivered by an integrated, highly experienced engineering team. Chairman: Eng. Helal Shelil.',
     aboutEyebrow: 'Who We Are',
     aboutTitle: 'About AL NAQEEB GROUP',

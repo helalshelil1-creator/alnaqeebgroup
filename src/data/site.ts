@@ -6,6 +6,9 @@ export interface Value {
   text: Loc
 }
 
+export const siteOrigin: string = __SITE_ORIGIN__
+export const siteHost = siteOrigin.replace(/^https?:\/\//, '')
+
 export const values: Value[] = [
   {
     icon: 'ShieldCheck',

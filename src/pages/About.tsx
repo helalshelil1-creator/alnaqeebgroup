@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import Reveal from '../components/Reveal'
 import usePageMeta from '../lib/usePageMeta'
-import { values, company } from '../data/site'
+import { values, company, siteOrigin } from '../data/site'
 import { services } from '../data/services'
 import { Icon } from '../lib/icons'
 import Note from '../components/Note'
@@ -96,13 +96,13 @@ export default function About() {
                 {t('about.chairmanDesc')}
               </p>
               <a
-                href="https://Alnaqeeb-group.vercel.app/"
+                href={`${siteOrigin}/`}
                 target="_blank"
                 rel="me noopener"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-gold underline-offset-4 transition-colors hover:text-white hover:underline"
               >
                 <ExternalLink size={15} />
-                {lang === 'ar' ? 'مكتب المهندس هلال شليل — الهندسة الكهربائية والأعمال الكهروميكانيكية' : 'Eng. Helal Shelil — Electrical & Electromechanical Engineering Office'}
+                {lang === 'ar' ? 'موقع مجموعة النقيب (AL NAQEEB GROUP)' : 'AL NAQEEB GROUP website'}
               </a>
               <a
                 href="https://hiilal.vercel.app/"
