@@ -109,6 +109,7 @@ export default function Contact() {
                   <div>
                     <p className="text-base font-bold text-navy">{company.chairman.name[lang]}</p>
                     <p className="text-sm text-muted">{company.chairman.role[lang]}</p>
+                    <p className="text-sm text-muted">{company.chairman.extraRole[lang]}</p>
                   </div>
                 </div>
               </div>

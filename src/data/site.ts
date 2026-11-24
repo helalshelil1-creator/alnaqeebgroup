@@ -53,6 +53,8 @@ export const company = {
   chairman: {
     name: { en: 'Eng. Helal Shelil', ar: 'المهندس / هلال شليل' },
     role: { en: 'Chairman of the Board of Directors', ar: 'رئيس مجلس الإدارة' },
+    // Self-described title supplied by Eng. Helal Shelil (no rank, unit or location).
+    extraRole: { en: 'Air Force Engineer Officer', ar: 'ضابط مهندس بالقوات الجوية' },
   },
   logo: '/img/logo.png',
   // Illustrative placeholder stats — replace with verified figures before publishing.

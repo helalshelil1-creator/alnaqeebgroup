@@ -91,6 +91,7 @@ export default function About() {
               <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-gold">
                 {company.chairman.role[lang]}
               </p>
+              <p className="mt-1 text-sm font-semibold text-white/80">{company.chairman.extraRole[lang]}</p>
               <p className="mt-5 max-w-xl leading-relaxed text-white/70">
                 {t('about.chairmanDesc')}
               </p>

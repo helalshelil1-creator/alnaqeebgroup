@@ -9,11 +9,27 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "AL NAQEEB GROUP",
-  "url": "https://Alnaqeeb-group.vercel.app/",
-  "logo": "https://Alnaqeeb-group.vercel.app/img/logo.png",
-  "description": "شركة النقيب جروب (AL NAQEEB GROUP) — مقاولات هندسية في 6 أكتوبر، مصر."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://Alnaqeeb-group.vercel.app/#organization",
+      "name": "AL NAQEEB GROUP",
+      "alternateName": "مجموعة النقيب",
+      "url": "https://Alnaqeeb-group.vercel.app/",
+      "logo": "https://Alnaqeeb-group.vercel.app/img/logo.png",
+      "description": "شركة النقيب جروب (AL NAQEEB GROUP) — مقاولات هندسية في 6 أكتوبر، مصر.",
+      "founder": { "@id": "https://Alnaqeeb-group.vercel.app/#helal-shelil" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://Alnaqeeb-group.vercel.app/#helal-shelil",
+      "name": "هلال شليل",
+      "alternateName": ["المهندس هلال شليل", "Eng. Helal Shelil"],
+      "jobTitle": ["رئيس مجلس الإدارة", "ضابط مهندس بالقوات الجوية"],
+      "worksFor": { "@id": "https://Alnaqeeb-group.vercel.app/#organization" },
+      "url": "https://Alnaqeeb-group.vercel.app/about"
+    }
+  ]
 }
 </script>
     <meta name="description" content="المهندس هلال شليل — رئيس مجلس إدارة شركة النقيب جروب (AL NAQEEB GROUP)، مقاولات هندسية في 6 أكتوبر، مصر. كهرباء، ميكانيكا، تكييف، مكافحة حريق، صيانة." />

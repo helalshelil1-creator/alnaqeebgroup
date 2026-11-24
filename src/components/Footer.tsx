@@ -82,6 +82,7 @@ export default function Footer() {
                 <div>
                   <p className="text-base font-bold text-white">{company.chairman.name[lang]}</p>
                   <p className="text-xs text-white/60">{company.chairman.role[lang]}</p>
+                  <p className="text-xs text-white/60">{company.chairman.extraRole[lang]}</p>
                   <a
                     href="https://Alnaqeeb-group.vercel.app/"
                     target="_blank"
