@@ -21,6 +21,23 @@ export default function RequestQuote() {
     { fullName: '', company: '', email: '', phone: '', service: '', location: '', projectType: '', budget: '', description: '' },
     ['fullName', 'email', 'phone', 'service', 'location', 'projectType', 'description'],
     'forms.successQuote',
+    (v, l) => {
+      const k = l === 'ar' ? 'ar' : 'en'
+      const pt: Record<string, { en: string; ar: string }> = {
+        new: { en: 'New Build', ar: 'بناء جديد' }, retrofit: { en: 'Retrofit / Upgrade', ar: 'تجديد / ترقية' },
+        maintenance: { en: 'Maintenance', ar: 'صيانة' }, consultation: { en: 'Consultation', ar: 'استشارة' },
+      }
+      const bd: Record<string, { en: string; ar: string }> = {
+        'under-100k': { en: 'Under EGP 100k', ar: 'أقل من 100 ألف جنيه' }, '100k-500k': { en: 'EGP 100k – 500k', ar: '100 – 500 ألف جنيه' },
+        '500k-1m': { en: 'EGP 500k – 1M', ar: '500 ألف – 1 مليون جنيه' }, 'over-1m': { en: 'Over EGP 1M', ar: 'أكثر من 1 مليون جنيه' },
+      }
+      return {
+        ...v,
+        service: services.find((s) => s.slug === v.service)?.title[k] ?? v.service,
+        projectType: pt[v.projectType]?.[k] ?? v.projectType,
+        budget: bd[v.budget]?.[k] ?? v.budget,
+      }
+    },
   )
 
   const steps = [
@@ -100,6 +117,7 @@ export default function RequestQuote() {
                 </button>
                 <input ref={fileRef} type="file" accept=".pdf,.doc,.docx,.dwg,.zip" className="hidden"
                   onChange={(e) => { const f = e.target.files?.[0]; if (f) { setFileName(f.name); form.setField('attachmentName', f.name) } }} />
+                <p className="mt-2 text-xs text-muted">{t('forms.fileNote')}</p>
               </div>
               <div className="sm:col-span-2">
                 <button type="submit" disabled={form.submitting} className="btn-gold w-full text-base">

@@ -19,8 +19,9 @@ export type FormType = 'contact' | 'quote' | 'application' | 'mmt'
 
 export interface SubmissionResult {
   ok: boolean
-  mode: 'sent' | 'unconfigured' | 'error'
+  mode: 'sent' | 'unconfigured' | 'error' | 'whatsapp'
   message?: string
+  url?: string
 }
 
 let runtimeConfig: { formEndpoint?: string } | null = null
@@ -43,12 +44,42 @@ export function isBackendConfigured(): boolean {
   return getEndpoint().length > 0
 }
 
+
+const WA_NUMBER = '201551405418'
+const LABELS: Record<string, { en: string; ar: string }> = {
+  fullName: { en: 'Name', ar: 'الاسم' }, company: { en: 'Company', ar: 'الشركة' },
+  email: { en: 'Email', ar: 'البريد' }, phone: { en: 'Phone', ar: 'الهاتف' },
+  subject: { en: 'Subject', ar: 'الموضوع' }, message: { en: 'Message', ar: 'الرسالة' },
+  service: { en: 'Service', ar: 'الخدمة' }, location: { en: 'Location', ar: 'الموقع' },
+  projectType: { en: 'Project type', ar: 'نوع المشروع' }, budget: { en: 'Budget', ar: 'الميزانية' },
+  description: { en: 'Description', ar: 'الوصف' }, attachmentName: { en: 'File name (not attached)', ar: 'اسم الملف (غير مرفق)' },
+}
+
+/** Build a wa.me link with the form content prefilled. Nothing is sent until the user presses send in WhatsApp. */
+export function buildWhatsAppUrl(type: FormType, data: Record<string, unknown>, lang: string): string {
+  const l = lang === 'ar' ? 'ar' : 'en'
+  const head = type === 'quote'
+    ? (l === 'ar' ? 'طلب عرض سعر - مجموعة النقيب' : 'Quotation request - AL NAQEEB GROUP')
+    : (l === 'ar' ? 'رسالة تواصل - مجموعة النقيب' : 'Contact message - AL NAQEEB GROUP')
+  const lines = Object.entries(data)
+    .filter(([, v]) => typeof v === 'string' && v.trim())
+    .map(([k, v]) => `${LABELS[k]?.[l] ?? k}: ${String(v).trim()}`)
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent([head, ...lines].join('\n'))}`
+}
+
 export async function submitForm(
   type: FormType,
   data: Record<string, unknown>,
   lang: string,
+  display?: Record<string, string>,
 ): Promise<SubmissionResult> {
   const endpoint = getEndpoint()
+
+  if (!endpoint && (type === 'contact' || type === 'quote')) {
+    const url = buildWhatsAppUrl(type, display ?? data, lang)
+    try { window.open(url, '_blank', 'noopener') } catch { /* link shown in the status box */ }
+    return { ok: false, mode: 'whatsapp', url }
+  }
 
   if (!endpoint) {
     // No backend configured: do NOT pretend it was delivered.

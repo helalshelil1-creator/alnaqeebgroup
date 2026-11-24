@@ -31,11 +31,21 @@ export default function FormStatus({
               </div>
             </div>
           )}
+          {result.mode === 'whatsapp' && (
+            <div className="mt-5 flex gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4">
+              <Info className="mt-0.5 shrink-0 text-amber-600" size={22} />
+              <div>
+                <p className="font-bold text-amber-800">{t('forms.waTitle')}</p>
+                <p className="text-sm text-amber-700">{t('forms.waNote')}</p>
+                <a href={result.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-bold text-navy underline">{t('forms.waOpen')}</a>
+              </div>
+            </div>
+          )}
           {result.mode === 'unconfigured' && (
             <div className="mt-5 flex gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4">
               <Info className="mt-0.5 shrink-0 text-amber-600" size={22} />
               <div>
-                <p className="font-bold text-amber-800">{t('forms.successTitle')}</p>
+                <p className="font-bold text-amber-800">{t('forms.localTitle')}</p>
                 <p className="text-sm text-amber-700">{t('forms.successNote')}</p>
               </div>
             </div>

@@ -8,6 +8,7 @@ export function useForm(
   initialValues: Record<string, string>,
   required: string[],
   successTextKey: string,
+  toDisplay?: (v: Record<string, string>, lang: string) => Record<string, string>,
 ) {
   const { t, i18n } = useTranslation()
   const [values, setValues] = useState(initialValues)
@@ -32,7 +33,7 @@ export function useForm(
     setErrors(errs)
     if (Object.keys(errs).length > 0) return
     setSubmitting(true)
-    const res = await submitForm(type, values, i18n.language)
+    const res = await submitForm(type, values, i18n.language, toDisplay?.(values, i18n.language))
     setResult(res)
     setSubmitting(false)
     if (res.ok) {

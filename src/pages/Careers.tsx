@@ -113,6 +113,7 @@ export default function Careers() {
                   ref={fileRef} type="file" accept=".pdf,.doc,.docx" className="hidden"
                   onChange={(e) => { const f = e.target.files?.[0]; if (f) { setFileName(f.name); form.setField('cvName', f.name) } }}
                 />
+                <p className="mt-2 text-xs text-muted">{t('forms.fileNote')}</p>
               </div>
               <div className="sm:col-span-2">
                 <Field label={t('forms.additional')} name="additional" type="textarea" value={form.values.additional} onChange={(v) => form.setField('additional', v)} rows={4} />

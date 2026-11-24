@@ -318,6 +318,7 @@ export default function Home() {
       </section>
 
       {/* Stats strip */}
+      {company.statsVerified && (
       <section className="relative overflow-hidden bg-navy py-16">
         <div className="absolute inset-0 opacity-20">
           <img src="/img/hero2.jpg" alt="" className="h-full w-full object-cover" loading="lazy" />
@@ -342,6 +343,7 @@ export default function Home() {
           )}
         </div>
       </section>
+      )}
 
       {/* FAQ */}
       <section className="bg-surface py-20 lg:py-24">

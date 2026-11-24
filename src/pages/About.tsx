@@ -155,6 +155,7 @@ export default function About() {
       </section>
 
       {/* Stats */}
+      {company.statsVerified && (
       <section className="bg-navy py-16">
         <div className="container-x grid grid-cols-2 gap-8 lg:grid-cols-4">
           {company.stats.map((s, idx) => (
@@ -170,6 +171,7 @@ export default function About() {
           </div>
         )}
       </section>
+      )}
 
       {/* Why choose us */}
       <section className="bg-white py-20">
