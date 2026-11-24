@@ -123,7 +123,7 @@ export default function HeroSlider() {
               >
                 {title1}
                 <br />
-                <span className="text-gradient-gold hero-script">{title2}</span>
+                <span className="text-gradient-gold">{title2}</span>
               </motion.h1>
 
               <motion.p
