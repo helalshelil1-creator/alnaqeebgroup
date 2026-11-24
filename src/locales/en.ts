@@ -270,6 +270,14 @@ export default {
     description: 'Role overview',
     responsibilities: 'Key responsibilities',
   },
+  install: {
+    title: 'Install the AL NAQEEB app',
+    text: 'Add the site to your home screen to open it like an app.',
+    button: 'Install app',
+    close: 'Close',
+    ios: 'Tap the Share button in Safari, then choose "Add to Home Screen".',
+    manual: 'Open your browser menu and choose "Install app" or "Add to Home screen".',
+  },
   forms: {
     fullName: 'Full Name',
     companyName: 'Company Name',
