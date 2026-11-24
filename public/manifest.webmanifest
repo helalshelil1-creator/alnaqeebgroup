@@ -1,0 +1,13 @@
+{
+  "name": "AL NAQEEB GROUP | مجموعة النقيب",
+  "short_name": "AL NAQEEB",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#062B52",
+  "theme_color": "#062B52",
+  "icons": [
+    { "src": "/img/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/img/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

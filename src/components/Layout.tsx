@@ -4,6 +4,7 @@ import Header from './Header'
 import Footer from './Footer'
 import FloatingActions from './FloatingActions'
 import Preloader from './Preloader'
+import InstallPrompt from './InstallPrompt'
 import ScrollProgress from './ScrollProgress'
 import MobileCta from './MobileCta'
 
@@ -31,6 +32,7 @@ export default function Layout() {
       </main>
       <Footer />
       <FloatingActions />
+      <InstallPrompt />
       <MobileCta />
     </div>
   )
