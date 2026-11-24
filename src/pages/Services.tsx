@@ -15,7 +15,7 @@ export default function Services() {
   return (
     <>
       <PageHero eyebrow={t('page.servicesEyebrow')} title={t('page.servicesTitle')}
-        description={t('page.servicesDesc')} crumb="Home" image="/img/svc-electrical.jpg" />
+        description={t('page.servicesDesc')} crumb="Home" image="/img/svc-electrical.webp" />
 
       <section className="bg-surface py-20">
         <div className="container-x-wide">

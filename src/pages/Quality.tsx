@@ -36,7 +36,7 @@ export default function Quality() {
         title={t('page.qualityTitle')}
         description={t('page.qualityDesc')}
         crumb={t('nav.home')}
-        image="/img/safety.jpg"
+        image="/img/safety.webp"
       />
 
       {/* Pillars */}

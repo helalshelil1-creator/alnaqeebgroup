@@ -56,7 +56,7 @@ export const company = {
     // Self-described title supplied by Eng. Helal Shelil (no rank, unit or location).
     extraRole: { en: 'Air Force Engineer Officer', ar: 'ضابط مهندس بالقوات الجوية' },
   },
-  logo: '/img/logo.png',
+  logo: '/img/logo.webp',
   // Illustrative placeholder stats — replace with verified figures before publishing.
   statsVerified: false,
   stats: [

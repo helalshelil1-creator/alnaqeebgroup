@@ -8,7 +8,7 @@ export default function PageHero({
   title,
   description,
   crumb,
-  image = '/img/hero2.jpg',
+  image = '/img/hero2.webp',
 }: {
   eyebrow: string
   title: string

@@ -10,13 +10,13 @@ export default function Preloader() {
 
   useEffect(() => {
     const start = performance.now()
-    const duration = 1300
+    const duration = 800
     let raf = 0
     const tick = (now: number) => {
       const p = Math.min(1, (now - start) / duration)
       setProgress(p)
       if (p < 1) raf = requestAnimationFrame(tick)
-      else window.setTimeout(() => setHidden(true), 220)
+      else window.setTimeout(() => setHidden(true), 150)
     }
     raf = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(raf)
@@ -28,7 +28,7 @@ export default function Preloader() {
         <div className="relative grid h-24 w-24 place-items-center">
           <span className="animate-pulse-ring absolute inset-0 rounded-3xl bg-gold/25" />
           <span className="absolute inset-0 rounded-3xl border border-gold/40" />
-          <img src="/img/logo-icon.png" alt="" className="h-16 w-auto object-contain" />
+          <img src="/img/logo-icon.webp" alt="" className="h-16 w-auto object-contain" />
         </div>
 
         <div className="text-center">

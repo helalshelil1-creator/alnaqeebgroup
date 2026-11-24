@@ -1,19 +1,20 @@
+import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import ServiceDetail from './pages/ServiceDetail'
-import Projects from './pages/Projects'
-import ProjectDetail from './pages/ProjectDetail'
-import Industries from './pages/Industries'
-import MMT from './pages/MMT'
-import TechnicalOffice from './pages/TechnicalOffice'
-import Quality from './pages/Quality'
-import Careers from './pages/Careers'
-import Contact from './pages/Contact'
-import RequestQuote from './pages/RequestQuote'
-import NotFound from './pages/NotFound'
+const About = lazy(() => import('./pages/About'))
+const Services = lazy(() => import('./pages/Services'))
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'))
+const Projects = lazy(() => import('./pages/Projects'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const Industries = lazy(() => import('./pages/Industries'))
+const MMT = lazy(() => import('./pages/MMT'))
+const TechnicalOffice = lazy(() => import('./pages/TechnicalOffice'))
+const Quality = lazy(() => import('./pages/Quality'))
+const Careers = lazy(() => import('./pages/Careers'))
+const Contact = lazy(() => import('./pages/Contact'))
+const RequestQuote = lazy(() => import('./pages/RequestQuote'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 export default function App() {
   return (

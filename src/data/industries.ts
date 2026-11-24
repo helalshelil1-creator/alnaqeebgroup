@@ -15,7 +15,7 @@ export const industries: Industry[] = [
   {
     slug: 'commercial-buildings',
     title: { en: 'Commercial Buildings', ar: 'المباني التجارية' },
-    image: '/img/capabilities.jpg',
+    image: '/img/capabilities.webp',
     imageAlt: 'Modern shopping mall and commercial office building exterior',
     imageCaption: 'Commercial Buildings',
     icon: 'Building2',
@@ -31,7 +31,7 @@ export const industries: Industry[] = [
   {
     slug: 'residential-developments',
     title: { en: 'Residential Developments', ar: 'التطويرات السكنية' },
-    image: '/img/proj-residential.jpg',
+    image: '/img/proj-residential.webp',
     imageAlt: 'Modern apartment complex and villa development facade',
     imageCaption: 'Residential Developments',
     icon: 'Home',
@@ -47,7 +47,7 @@ export const industries: Industry[] = [
   {
     slug: 'industrial-facilities',
     title: { en: 'Industrial Facilities', ar: 'المنشآت الصناعية' },
-    image: '/img/execution-site.jpg',
+    image: '/img/execution-site.webp',
     imageAlt: 'Large industrial warehouse and factory building with steel structure',
     imageCaption: 'Industrial Facilities',
     icon: 'Factory',
@@ -63,7 +63,7 @@ export const industries: Industry[] = [
   {
     slug: 'healthcare-facilities',
     title: { en: 'Healthcare Facilities', ar: 'المرافق الصحية' },
-    image: '/img/svc-hvac.jpg',
+    image: '/img/svc-hvac.webp',
     imageAlt: 'Modern hospital building with glass facade and medical complex',
     imageCaption: 'Healthcare Facilities',
     icon: 'HeartPulse',
@@ -79,7 +79,7 @@ export const industries: Industry[] = [
   {
     slug: 'educational-buildings',
     title: { en: 'Educational Buildings', ar: 'المباني التعليمية' },
-    image: '/img/svc-panels.jpg',
+    image: '/img/svc-panels.webp',
     imageAlt: 'University campus and educational building with modern architecture',
     imageCaption: 'Educational Buildings',
     icon: 'GraduationCap',
@@ -95,7 +95,7 @@ export const industries: Industry[] = [
   {
     slug: 'hospitality',
     title: { en: 'Hospitality', ar: 'الضيافة' },
-    image: '/img/hero3.jpg',
+    image: '/img/hero3.webp',
     imageAlt: 'Luxury hotel building exterior and resort architecture',
     imageCaption: 'Hospitality Sector',
     icon: 'Hotel',
@@ -111,7 +111,7 @@ export const industries: Industry[] = [
   {
     slug: 'infrastructure',
     title: { en: 'Infrastructure', ar: 'البنية التحتية' },
-    image: '/img/ind-infrastructure.jpg',
+    image: '/img/ind-infrastructure.webp',
     imageAlt: 'Highway interchange, bridge, and tunnel infrastructure',
     imageCaption: 'Infrastructure',
     icon: 'Construction',
@@ -127,7 +127,7 @@ export const industries: Industry[] = [
   {
     slug: 'government-institutional',
     title: { en: 'Government & Institutional', ar: 'الحكومية والمؤسسية' },
-    image: '/img/about.jpg',
+    image: '/img/about.webp',
     imageAlt: 'Government building and institutional complex facade',
     imageCaption: 'Government & Institutional',
     icon: 'Landmark',

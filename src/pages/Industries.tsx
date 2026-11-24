@@ -15,7 +15,7 @@ export default function Industries() {
   return (
     <>
       <PageHero eyebrow={t('page.industriesEyebrow')} title={t('page.industriesTitle')}
-        description={t('page.industriesDesc')} crumb="Home" image="/img/hero2.jpg" />
+        description={t('page.industriesDesc')} crumb="Home" image="/img/hero2.webp" />
 
       <section className="bg-surface py-20">
         <div className="container-x">

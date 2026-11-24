@@ -54,7 +54,7 @@ export default function RequestQuote() {
   return (
     <>
       <PageHero eyebrow={t('page.quoteEyebrow')} title={t('page.quoteTitle')}
-        description={t('page.quoteDesc')} crumb="Home" image="/img/hero.jpg" />
+        description={t('page.quoteDesc')} crumb="Home" image="/img/hero.webp" />
 
       {/* How it works */}
       <section className="bg-white py-14">

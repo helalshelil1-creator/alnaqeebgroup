@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Header from './Header'
@@ -27,7 +28,7 @@ export default function Layout() {
       <main id="main" className="flex-1">
         {/* key forces a remount per route so the entrance animation replays */}
         <div key={location.pathname} className="page-enter">
-          <Outlet />
+          <Suspense fallback={<div className="min-h-[60vh]" aria-hidden="true" />}><Outlet /></Suspense>
         </div>
       </main>
       <Footer />
