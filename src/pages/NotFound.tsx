@@ -1,9 +1,19 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Home, ArrowRight } from 'lucide-react'
 
 export default function NotFound() {
   const { t } = useTranslation()
+  // Unknown URLs must not be indexed as copies of the home page.
+  useEffect(() => {
+    const el = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]')
+    const prev = el?.getAttribute('content') ?? null
+    el?.setAttribute('content', 'noindex, follow')
+    const prevTitle = document.title
+    document.title = '404 | AL NAQEEB GROUP'
+    return () => { if (el && prev !== null) el.setAttribute('content', prev); document.title = prevTitle }
+  }, [])
   return (
     <section className="relative overflow-hidden bg-navy">
       <div className="absolute inset-0">
