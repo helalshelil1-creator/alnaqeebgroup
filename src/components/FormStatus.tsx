@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { CheckCircle2, AlertTriangle, Info } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
@@ -11,6 +12,13 @@ export default function FormStatus({
   successText: string
 }) {
   const { t } = useTranslation()
+  const ref = useRef<HTMLDivElement>(null)
+  // Bring the whole confirmation into view, clear of the sticky mobile bar.
+  useEffect(() => {
+    if (!result) return
+    const id = window.setTimeout(() => ref.current?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 450)
+    return () => window.clearTimeout(id)
+  }, [result])
   return (
     <AnimatePresence>
       {result && (
@@ -18,6 +26,7 @@ export default function FormStatus({
           initial={{ opacity: 0, y: 8, height: 0 }}
           animate={{ opacity: 1, y: 0, height: 'auto' }}
           exit={{ opacity: 0, y: -8, height: 0 }}
+          ref={ref}
           className="scroll-mb-32 overflow-hidden"
           role="status"
           aria-live="polite"

@@ -83,7 +83,6 @@ export default function usePageMeta(title: string, description: string) {
     setMeta('property', 'og:image:alt', 'AL NAQEEB GROUP — contracting')
     setMeta('property', 'og:locale', isAr ? 'ar_AR' : 'en_US')
     setMeta('property', 'og:locale:alternate', isAr ? 'en_US' : 'ar_AR')
-    setMeta('property', 'og:email', 'alnaqeebgroup@gmail.com')
 
     /* --- canonical + hreflang (per current page) --- */
     setCanonical(url)

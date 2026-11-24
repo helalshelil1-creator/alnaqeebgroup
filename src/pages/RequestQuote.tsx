@@ -124,7 +124,7 @@ export default function RequestQuote() {
               </div>
               <div className="sm:col-span-2">
                 <button type="submit" disabled={form.submitting} className="btn-gold w-full text-base">
-                  {form.submitting ? form.sendingLabel : t('forms.submitQuote')}
+                  {form.submitting ? form.sendingLabel : isPersonal ? t('forms.demoSubmit') : t('forms.submitQuote')}
                   {!form.submitting && <Send size={18} />}
                 </button>
               </div>

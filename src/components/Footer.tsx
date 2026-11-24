@@ -145,33 +145,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="lg:col-span-3">
             <h3 className="text-sm font-bold uppercase tracking-wider text-gold">{t('footer.contactHeading')}</h3>
-            <ul className="mt-5 space-y-4 text-sm text-white/70">
-              <li className="flex items-start gap-3">
-                <MapPin size={17} className="mt-0.5 shrink-0 text-gold" />
-                <span>{pickLoc(contact.address, lang)}</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={16} className="shrink-0 text-gold" />
-                <a href={`tel:${contact.phone.replace(/[^+\d]/g, '')}`} className="transition-colors hover:text-white">
-                  {contact.phone}
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={16} className="shrink-0 text-gold" />
-                <a href={`mailto:${contact.email}`} className="break-all transition-colors hover:text-white">
-                  {contact.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Clock size={16} className="shrink-0 text-gold" />
-                <span>{pickLoc(contact.hours, lang)}</span>
-              </li>
-            </ul>
-            {!contact.verified && (
-              <p className="mt-4 rounded-lg bg-white/5 px-3 py-2 text-xs text-white/50">
-                {t('footer.placeholderNote')}
-              </p>
-            )}
+
             <Link
               to="/quote"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-navy transition-all hover:-translate-y-0.5 hover:brightness-110"

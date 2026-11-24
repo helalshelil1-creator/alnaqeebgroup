@@ -22,12 +22,8 @@ export default function Contact() {
     'forms.successContact',
   )
 
-  const cards = [
-    { icon: Mail, label: t('forms.email'), value: contact.email, href: `mailto:${contact.email}` },
-    { icon: Phone, label: t('forms.phone'), value: contact.phone, href: `tel:${contact.phone.replace(/[^+\d]/g, '')}` },
-    ...(isPersonal ? [] : [{ icon: MessageCircle, label: 'WhatsApp', value: contact.whatsapp, href: `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}` }]),
-    { icon: MapPin, label: t('common.address'), value: contact.address[lang], href: '' },
-    { icon: Clock, label: t('footer.contactHeading'), value: contact.hours[lang], href: '' },
+  const cards = isPersonal ? [] : [
+    { icon: MessageCircle, label: 'WhatsApp', value: contact.whatsapp, href: `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}` },
   ]
 
   return (
@@ -35,7 +31,7 @@ export default function Contact() {
       <PageHero eyebrow={t('page.contactEyebrow')} title={t('page.contactTitle')}
         description={t('page.contactDesc')} crumb="Home" image="/img/about.jpg" />
 
-      <section className="bg-surface py-16">
+      {cards.length > 0 && <section className="bg-surface py-16">
         <div className="container-x grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((c, idx) => (
             <Reveal key={idx} delay={idx} className="rounded-2xl bg-white p-6 text-center shadow-card">
@@ -49,7 +45,7 @@ export default function Contact() {
             </Reveal>
           ))}
         </div>
-      </section>
+      </section>}
 
       <section className="bg-white py-16">
         <div className="container-x grid gap-12 lg:grid-cols-2">
@@ -70,7 +66,7 @@ export default function Contact() {
               </div>
               <div className="sm:col-span-2">
                 <button type="submit" disabled={form.submitting} className="btn-navy w-full">
-                  {form.submitting ? form.sendingLabel : t('forms.submitContact')}
+                  {form.submitting ? form.sendingLabel : isPersonal ? t('forms.demoSubmit') : t('forms.submitContact')}
                 </button>
               </div>
               <div className="sm:col-span-2">
@@ -95,7 +91,6 @@ export default function Contact() {
                   {contact.verified ? t('footer.mapNote') : t('footer.placeholderNote')}
                 </Note>
               )}
-              <p className="mt-4 text-muted">{contact.address[lang]}</p>
               <div className="mt-6 border-t border-slate-200 pt-5">
                 <p className="text-xs font-bold uppercase tracking-wide text-muted">{t('about.chairmanEyebrow')}</p>
                 <div className="mt-3 flex items-center gap-3">

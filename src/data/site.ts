@@ -33,14 +33,10 @@ export const values: Value[] = [
   },
 ]
 
-/** Verified company contact details (November 2026). */
+/** Only the WhatsApp number the owner approved for form handoff. Email, phone, address and hours were unverified and are removed. */
 export const contact = {
-  verified: true,
-  email: 'alnaqeebgroup@gmail.com',
-  phone: '+20 112 416 9656',
+  verified: true, // whatsapp only
   whatsapp: '+201551405418',
-  address: { en: 'Sun Capital, 6th of October City', ar: 'صن كابيتال - مدينة السادس من أكتوبر' },
-  hours: { en: 'Sunday – Thursday, 8:00 – 18:00', ar: 'الأحد – الخميس، 8:00 – 18:00' },
   mapUrl: '',
   social: {
     linkedin: '',

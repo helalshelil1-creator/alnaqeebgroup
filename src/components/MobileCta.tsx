@@ -24,13 +24,6 @@ export default function MobileCta() {
         >
           <WhatsAppIcon size={22} />
         </a>}
-        {!isPersonal && <a
-          href={`tel:${contact.phone.replace(/[^+\d]/g, '')}`}
-          aria-label={t('forms.phone')}
-          className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-navy/15 text-navy transition-colors active:bg-surface"
-        >
-          <Phone size={19} />
-        </a>}
         <Link to="/quote" className="btn-navy flex-1 py-3 text-sm">
           {t('nav.quote')}
         </Link>

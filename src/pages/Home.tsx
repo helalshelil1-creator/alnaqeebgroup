@@ -357,25 +357,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted">{t('home.faqSubtitle')}</p>
 
-            <div className="mt-8 space-y-1 rounded-2xl border border-slate-100 bg-white p-4 shadow-card">
-              <a
-                href={`tel:${contact.phone.replace(/[^+\d]/g, '')}`}
-                className="group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-navy transition-colors hover:bg-surface"
-              >
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-navy/5 text-gold transition-colors group-hover:bg-gold group-hover:text-navy">
-                  <Phone size={17} />
-                </span>
-                <span dir="ltr">{contact.phone}</span>
-              </a>
-              <a
-                href={`mailto:${contact.email}`}
-                className="group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-navy transition-colors hover:bg-surface"
-              >
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-navy/5 text-gold transition-colors group-hover:bg-gold group-hover:text-navy">
-                  <Mail size={17} />
-                </span>
-                <span className="break-all">{contact.email}</span>
-              </a>
+            {!isPersonal && <div className="mt-8 space-y-1 rounded-2xl border border-slate-100 bg-white p-4 shadow-card">
               {!isPersonal && (
               <a
                 href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}
@@ -389,7 +371,7 @@ export default function Home() {
                 <span dir="ltr">{waDisplay}</span>
               </a>
               )}
-            </div>
+            </div>}
           </Reveal>
           <Reveal delay={1}>
             <Faq items={faqItems} />

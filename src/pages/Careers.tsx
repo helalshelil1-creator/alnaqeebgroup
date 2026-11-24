@@ -123,7 +123,7 @@ export default function Careers() {
               </div>
               <div className="sm:col-span-2">
                 <button type="submit" disabled={form.submitting} className="btn-gold w-full">
-                  {form.submitting ? form.sendingLabel : t('forms.submitApplication')}
+                  {form.submitting ? form.sendingLabel : isPersonal ? t('forms.demoSubmit') : t('forms.submitApplication')}
                   {!form.submitting && <CheckCircle2 size={18} />}
                 </button>
               </div>
