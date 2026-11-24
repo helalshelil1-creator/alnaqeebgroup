@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ArrowUp } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { contact } from '../data/site'
+import { contact, isPersonal } from '../data/site'
 import WhatsAppIcon from './WhatsAppIcon'
 
 export default function FloatingActions() {
@@ -14,7 +14,7 @@ export default function FloatingActions() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const hasWhatsapp = contact.verified && contact.whatsapp.trim().length > 0
+  const hasWhatsapp = !isPersonal && contact.verified && contact.whatsapp.trim().length > 0
 
   return (
     <>

@@ -7,6 +7,7 @@ export interface Value {
 }
 
 export const siteOrigin: string = __SITE_ORIGIN__
+export const isPersonal: boolean = __EDITION__ === 'personal'
 export const siteHost = siteOrigin.replace(/^https?:\/\//, '')
 
 export const values: Value[] = [

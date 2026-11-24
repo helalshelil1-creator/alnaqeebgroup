@@ -4,6 +4,8 @@ import { Upload, Send, ClipboardList, Layers, ShieldCheck } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import Field from '../components/Field'
+import Note from '../components/Note'
+import { isPersonal } from '../data/site'
 import FormStatus from '../components/FormStatus'
 import usePageMeta from '../lib/usePageMeta'
 import { useForm } from '../lib/useForm'
@@ -71,6 +73,7 @@ export default function RequestQuote() {
       <section className="bg-surface py-16">
         <div className="container-x">
           <div className="mx-auto max-w-4xl rounded-3xl bg-white p-8 shadow-lift sm:p-10">
+            {isPersonal && <Note tone="amber" className="mb-5">{t('forms.demoBefore')}</Note>}
             <form onSubmit={form.onSubmit} className="grid gap-5 sm:grid-cols-2" noValidate>
               <Field label={t('forms.fullName')} name="fullName" required value={form.values.fullName} onChange={(v) => form.setField('fullName', v)} error={form.errors.fullName} />
               <Field label={t('forms.companyName')} name="company" value={form.values.company} onChange={(v) => form.setField('company', v)} />

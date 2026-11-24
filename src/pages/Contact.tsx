@@ -8,7 +8,7 @@ import Field from '../components/Field'
 import FormStatus from '../components/FormStatus'
 import usePageMeta from '../lib/usePageMeta'
 import { useForm } from '../lib/useForm'
-import { contact, company } from '../data/site'
+import { contact, company , isPersonal } from '../data/site'
 
 export default function Contact() {
   const { t, i18n } = useTranslation()
@@ -25,7 +25,7 @@ export default function Contact() {
   const cards = [
     { icon: Mail, label: t('forms.email'), value: contact.email, href: `mailto:${contact.email}` },
     { icon: Phone, label: t('forms.phone'), value: contact.phone, href: `tel:${contact.phone.replace(/[^+\d]/g, '')}` },
-    { icon: MessageCircle, label: 'WhatsApp', value: contact.whatsapp, href: `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}` },
+    ...(isPersonal ? [] : [{ icon: MessageCircle, label: 'WhatsApp', value: contact.whatsapp, href: `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}` }]),
     { icon: MapPin, label: t('common.address'), value: contact.address[lang], href: '' },
     { icon: Clock, label: t('footer.contactHeading'), value: contact.hours[lang], href: '' },
   ]
@@ -56,6 +56,7 @@ export default function Contact() {
           {/* Form */}
           <div>
             <SectionHeading title={t('page.contactTitle')} subtitle={t('page.contactDesc')} />
+            {isPersonal && <Note tone="amber" className="mb-5">{t('forms.demoBefore')}</Note>}
             <form onSubmit={form.onSubmit} className="mt-8 grid gap-5 sm:grid-cols-2" noValidate>
               <Field label={t('forms.fullName')} name="fullName" required value={form.values.fullName} onChange={(v) => form.setField('fullName', v)} error={form.errors.fullName} />
               <Field label={t('forms.companyName')} name="company" value={form.values.company} onChange={(v) => form.setField('company', v)} />

@@ -13,7 +13,7 @@ import Feature from '../components/Feature'
 import Reveal from '../components/Reveal'
 import usePageMeta from '../lib/usePageMeta'
 import { services } from '../data/services'
-import { company, contact } from '../data/site'
+import { company, contact, isPersonal } from '../data/site'
 import { Icon } from '../lib/icons'
 
 export default function Home() {
@@ -376,6 +376,7 @@ export default function Home() {
                 </span>
                 <span className="break-all">{contact.email}</span>
               </a>
+              {!isPersonal && (
               <a
                 href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}
                 target="_blank"
@@ -387,6 +388,7 @@ export default function Home() {
                 </span>
                 <span dir="ltr">{waDisplay}</span>
               </a>
+              )}
             </div>
           </Reveal>
           <Reveal delay={1}>

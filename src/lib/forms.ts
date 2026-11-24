@@ -19,7 +19,7 @@ export type FormType = 'contact' | 'quote' | 'application' | 'mmt'
 
 export interface SubmissionResult {
   ok: boolean
-  mode: 'sent' | 'unconfigured' | 'error' | 'whatsapp'
+  mode: 'sent' | 'unconfigured' | 'error' | 'whatsapp' | 'demo'
   message?: string
   url?: string
 }
@@ -73,6 +73,9 @@ export async function submitForm(
   lang: string,
   display?: Record<string, string>,
 ): Promise<SubmissionResult> {
+  // Personal edition: nothing is sent, stored or opened.
+  if (__EDITION__ === 'personal') return { ok: false, mode: 'demo' }
+
   const endpoint = getEndpoint()
 
   if (!endpoint && (type === 'contact' || type === 'quote')) {

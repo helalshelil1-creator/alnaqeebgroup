@@ -5,6 +5,8 @@ import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import Reveal from '../components/Reveal'
 import Field from '../components/Field'
+import Note from '../components/Note'
+import { isPersonal } from '../data/site'
 import FormStatus from '../components/FormStatus'
 import usePageMeta from '../lib/usePageMeta'
 import { useForm } from '../lib/useForm'
@@ -86,6 +88,7 @@ export default function Careers() {
         <div className="container-x">
           <div className="mx-auto max-w-3xl rounded-3xl border border-slate-100 bg-surface p-8 shadow-card sm:p-10">
             <SectionHeading title={t('careers.applyTitle')} subtitle={t('careers.applyDesc')} />
+            {isPersonal && <Note tone="amber" className="mb-5">{t('forms.demoBefore')}</Note>}
             <form onSubmit={form.onSubmit} className="mt-8 grid gap-5 sm:grid-cols-2" noValidate>
               <Field label={t('forms.fullName')} name="fullName" required value={form.values.fullName} onChange={(v) => form.setField('fullName', v)} error={form.errors.fullName} />
               <Field label={t('forms.email')} name="email" type="email" required value={form.values.email} onChange={(v) => form.setField('email', v)} error={form.errors.email} />

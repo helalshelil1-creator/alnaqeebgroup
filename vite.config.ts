@@ -10,6 +10,9 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs'
  */
 const SITE_ORIGIN = (process.env.SITE_ORIGIN || 'https://Alnaqeeb-group.vercel.app').replace(/\/+$/, '')
 
+/** EDITION=personal builds a personal/demo copy: forms take no real requests and no WhatsApp contact is shown. Default: commercial. */
+const EDITION = process.env.EDITION === 'personal' ? 'personal' : 'commercial'
+
 function siteOrigin(): Plugin {
   let outDir = 'dist'
   return {
@@ -27,7 +30,7 @@ function siteOrigin(): Plugin {
 
 export default defineConfig({
   plugins: [react(), siteOrigin()],
-  define: { __SITE_ORIGIN__: JSON.stringify(SITE_ORIGIN) },
+  define: { __SITE_ORIGIN__: JSON.stringify(SITE_ORIGIN), __EDITION__: JSON.stringify(EDITION) },
   build: {
     modulePreload: false,
     outDir: 'dist',
