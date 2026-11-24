@@ -16,7 +16,7 @@ export default function AboutSection() {
         <Reveal className="relative">
           <div className="overflow-hidden rounded-3xl shadow-lift">
             <img
-              src="/img/about.jpg"
+              src="/img/about.webp"
               alt="AL NAQEEB GROUP headquarters exterior with corporate branding"
               loading="lazy"
               className="h-[380px] w-full object-cover sm:h-[460px]"

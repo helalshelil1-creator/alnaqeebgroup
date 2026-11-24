@@ -5,16 +5,19 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ArrowRight, Mouse } from 'lucide-react'
 
 const SLIDES = [
-  { image: '/img/hero.jpg', alt: 'Construction site with tower crane and city skyline at dusk' },
-  { image: '/img/hero2.jpg', alt: 'Modern highway interchange with traffic and road signs' },
-  { image: '/img/hero3.jpg', alt: 'Engineers in safety helmets reviewing construction plans at site' },
-  { image: '/img/hero4.png', alt: 'AL NAQEEB GROUP promotional banner — Building a Greater Tomorrow' },
-  { image: '/img/mmt-vehicle.jpg', alt: 'AL NAQEEB GROUP MMT mobile maintenance vehicle on site' },
-  { image: '/img/execution-site.jpg', alt: 'Construction site operations with equipment and crews' },
-  { image: '/img/ind-infrastructure.jpg', alt: 'Infrastructure and highway interchange works' },
+  { image: '/img/hero.webp', alt: 'Construction site with tower crane and city skyline at dusk' },
+  { image: '/img/hero2.webp', alt: 'Modern highway interchange with traffic and road signs' },
+  { image: '/img/hero3.webp', alt: 'Engineers in safety helmets reviewing construction plans at site' },
+  { image: '/img/hero4.webp', alt: 'AL NAQEEB GROUP promotional banner — Building a Greater Tomorrow' },
+  { image: '/img/mmt-vehicle.webp', alt: 'AL NAQEEB GROUP MMT mobile maintenance vehicle on site' },
+  { image: '/img/execution-site.webp', alt: 'Construction site operations with equipment and crews' },
+  { image: '/img/ind-infrastructure.webp', alt: 'Infrastructure and highway interchange works' },
 ]
 
-const AUTOPLAY_MS = 6500
+const AUTOPLAY_MS = 5000
+
+/** 800px variant for phones (…-800.webp) next to the 1600px one. */
+const small = (src: string) => src.replace(/\.webp$/, '-800.webp')
 
 export default function HeroSlider() {
   const { t } = useTranslation()
@@ -35,6 +38,14 @@ export default function HeroSlider() {
       setDir(1)
     }, AUTOPLAY_MS)
   }, [])
+
+  // Warm the next slide so the swap never waits on the network.
+  useEffect(() => {
+    const n = new Image()
+    n.srcset = `${small(SLIDES[(i + 1) % SLIDES.length].image)} 800w, ${SLIDES[(i + 1) % SLIDES.length].image} 1600w`
+    n.sizes = '100vw'
+    n.src = SLIDES[(i + 1) % SLIDES.length].image
+  }, [i])
 
   const next = () => go(i + 1, 1)
   const prev = () => go(i - 1, -1)
@@ -63,12 +74,18 @@ export default function HeroSlider() {
         >
           <motion.img
             src={SLIDES[i].image}
+            srcSet={`${small(SLIDES[i].image)} 800w, ${SLIDES[i].image} 1600w`}
+            sizes="100vw"
+            width={1600}
+            height={900}
             alt=""
             loading="eager"
+            decoding="async"
+            fetchPriority={i === 0 ? 'high' : 'auto'}
             className="h-full w-full object-cover"
             initial={{ scale: 1.14 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 6.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 5, ease: [0.22, 1, 0.36, 1] }}
           />
         </motion.div>
       </AnimatePresence>
@@ -106,7 +123,7 @@ export default function HeroSlider() {
               >
                 {title1}
                 <br />
-                <span className="text-gradient-gold">{title2}</span>
+                <span className="text-gradient-gold hero-script">{title2}</span>
               </motion.h1>
 
               <motion.p

@@ -35,7 +35,7 @@ export default function MMT() {
         title={t('mmt.title')}
         description={t('mmt.desc')}
         crumb={t('nav.home')}
-        image="/img/mmt-team.jpg"
+        image="/img/mmt-team.webp"
       />
 
       {/* Services */}
@@ -66,7 +66,7 @@ export default function MMT() {
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <div className="overflow-hidden rounded-3xl shadow-lift">
-              <img src="/img/mmt-vehicle.jpg" alt="AL NAQEEB GROUP MMT mobile maintenance vehicle" loading="lazy" className="h-[420px] w-full object-cover" />
+              <img src="/img/mmt-vehicle.webp" alt="AL NAQEEB GROUP MMT mobile maintenance vehicle" loading="lazy" className="h-[420px] w-full object-cover" />
             </div>
           </Reveal>
           <div>
@@ -93,7 +93,7 @@ export default function MMT() {
           </div>
           <Reveal className="order-1 lg:order-2">
             <div className="overflow-hidden rounded-3xl shadow-lift">
-              <img src="/img/mmt-team.jpg" alt="MMT certified technicians on site" loading="lazy" className="h-[420px] w-full object-cover" />
+              <img src="/img/mmt-team.webp" alt="MMT certified technicians on site" loading="lazy" className="h-[420px] w-full object-cover" />
             </div>
           </Reveal>
         </div>

@@ -41,7 +41,7 @@ export default function Careers() {
   return (
     <>
       <PageHero eyebrow={t('page.careersEyebrow')} title={t('page.careersTitle')}
-        description={t('page.careersDesc')} crumb="Home" image="/img/hero3.jpg" />
+        description={t('page.careersDesc')} crumb="Home" image="/img/hero3.webp" />
 
       <section className="bg-white py-16">
         <div className="container-x grid items-center gap-10 lg:grid-cols-2">
@@ -50,7 +50,7 @@ export default function Careers() {
             <p className="mt-4 text-lg leading-relaxed text-muted">{t('careers.introBody')}</p>
           </Reveal>
           <Reveal delay={1} className="overflow-hidden rounded-3xl shadow-lift">
-            <img src="/img/careers.jpg" alt="Construction workers and engineers in safety helmets" loading="lazy" className="h-[320px] w-full object-cover" />
+            <img src="/img/careers.webp" alt="Construction workers and engineers in safety helmets" loading="lazy" className="h-[320px] w-full object-cover" />
           </Reveal>
         </div>
       </section>

@@ -19,7 +19,7 @@ export const services: Service[] = [
   {
     slug: 'electrical-works',
     icon: 'Zap',
-    image: '/img/electrical.jpg',
+    image: '/img/electrical.webp',
     imageAlt: 'Electrical switchgear distribution and control panels in an industrial setting',
     imageCaption: 'Electrical switchgear distribution and control panels in an industrial setting',
     title: { en: 'Electrical Works', ar: 'الأعمال الكهربائية' },
@@ -41,7 +41,7 @@ export const services: Service[] = [
   {
     slug: 'mechanical-works',
     icon: 'Settings',
-    image: '/img/svc-mechanical.jpg',
+    image: '/img/svc-mechanical.webp',
     imageAlt: 'Industrial piping, valves, and mechanical systems in a plant facility',
     imageCaption: 'Industrial piping, valves, and mechanical systems in a plant facility',
     title: { en: 'Mechanical Works', ar: 'الأعمال الميكانيكية' },
@@ -63,7 +63,7 @@ export const services: Service[] = [
   {
     slug: 'hvac-systems',
     icon: 'Wind',
-    image: '/img/svc-hvac.jpg',
+    image: '/img/svc-hvac.webp',
     imageAlt: 'HVAC ductwork, air handling units, and cooling systems installation',
     imageCaption: 'HVAC ductwork, air handling units, and cooling systems installation',
     title: { en: 'HVAC Systems', ar: 'أنظمة التكييف' },
@@ -85,7 +85,7 @@ export const services: Service[] = [
   {
     slug: 'fire-fighting-fire-alarm',
     icon: 'Flame',
-    image: '/img/svc-fire.jpg',
+    image: '/img/svc-fire.webp',
     imageAlt: 'Fire sprinkler system with red pipes and hydrant network',
     imageCaption: 'Fire sprinkler system with red pipes and hydrant network',
     title: { en: 'Fire Fighting & Fire Alarm', ar: 'مكافحة الحريق وإنذار الحريق' },
@@ -107,7 +107,7 @@ export const services: Service[] = [
   {
     slug: 'control-panels',
     icon: 'Gauge',
-    image: '/img/svc-panels.jpg',
+    image: '/img/svc-panels.webp',
     imageAlt: 'Industrial control panel and PLC cabinet with HMI touchscreen',
     imageCaption: 'Industrial control panel and PLC cabinet with HMI touchscreen',
     title: { en: 'Control Panels', ar: 'لوحات التحكم' },
@@ -129,7 +129,7 @@ export const services: Service[] = [
   {
     slug: 'elv-smart-systems',
     icon: 'Cctv',
-    image: '/img/svc-elv.jpg',
+    image: '/img/svc-elv.webp',
     imageAlt: 'CCTV security camera, access control terminals, and network rack',
     imageCaption: 'CCTV security camera, access control terminals, and network rack',
     title: { en: 'ELV & Smart Systems', ar: 'الأنظمة الذكية والمنخفضة الجهد' },
@@ -151,7 +151,7 @@ export const services: Service[] = [
   {
     slug: 'maintenance-testing',
     icon: 'Wrench',
-    image: '/img/svc-maintenance.png',
+    image: '/img/svc-maintenance.webp',
     imageAlt: 'Maintenance technician with multimeter, diagnostic tools, and safety equipment',
     imageCaption: 'Maintenance technician with multimeter, diagnostic tools, and safety equipment',
     title: { en: 'Maintenance & Testing', ar: 'الصيانة والاختبار' },

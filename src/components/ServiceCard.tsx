@@ -25,7 +25,7 @@ export default function ServiceCard({ service, index = 0 }: { service: Service; 
         <img
           src={service.image}
           alt={service.imageAlt || service.title[lang]}
-          loading="eager"
+          loading="lazy"
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-smooth group-hover:scale-110"
         />
 

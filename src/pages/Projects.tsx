@@ -22,7 +22,7 @@ export default function Projects() {
   return (
     <>
       <PageHero eyebrow={t('page.projectsEyebrow')} title={t('page.projectsTitle')}
-        description={t('page.projectsDesc')} crumb="Home" image="/img/about.jpg" />
+        description={t('page.projectsDesc')} crumb="Home" image="/img/about.webp" />
 
       <section className="bg-surface py-16">
         <div className="container-x">

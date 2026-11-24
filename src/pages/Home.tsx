@@ -47,9 +47,9 @@ export default function Home() {
   ]
 
   const hqImages = [
-    { src: '/img/hq-office.jpg', alt: 'Executive office and design studio at AL NAQEEB GROUP headquarters' },
-    { src: '/img/about.jpg', alt: 'AL NAQEEB GROUP headquarters exterior with corporate branding' },
-    { src: '/img/office-design.png', alt: 'Design and technical office with modern workstations' },
+    { src: '/img/hq-office.webp', alt: 'Executive office and design studio at AL NAQEEB GROUP headquarters' },
+    { src: '/img/about.webp', alt: 'AL NAQEEB GROUP headquarters exterior with corporate branding' },
+    { src: '/img/office-design.webp', alt: 'Design and technical office with modern workstations' },
   ]
 
   return (
@@ -155,7 +155,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={1}>
             <div className="relative overflow-hidden rounded-3xl shadow-lift">
-              <img src="/img/capabilities.jpg" alt={t('home.capabilitiesTitle')} loading="lazy" className="aspect-[16/9] w-full object-cover" />
+              <img src="/img/capabilities.webp" alt={t('home.capabilitiesTitle')} loading="lazy" className="aspect-[16/9] w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
             </div>
           </Reveal>
@@ -167,7 +167,7 @@ export default function Home() {
         eyebrow={t('home.officeEyebrow')}
         title={t('home.officeTitle')}
         desc={t('home.officeDesc')}
-        image="/img/office-design.png"
+        image="/img/office-design.webp"
         alt="Design and technical office with modern workstations and project models"
         items={officeItems.slice(0, 8)}
         linkTo="/technical-office"
@@ -177,7 +177,7 @@ export default function Home() {
       {/* MMT teaser band */}
       <section className="relative overflow-hidden bg-navy-800 py-20 lg:py-24">
         <div className="absolute inset-0 opacity-25">
-          <img src="/img/mmt-vehicle.jpg" alt="AL NAQEEB GROUP MMT mobile maintenance vehicle on construction site" className="h-full w-full object-cover" loading="lazy" />
+          <img src="/img/mmt-vehicle.webp" alt="AL NAQEEB GROUP MMT mobile maintenance vehicle on construction site" className="h-full w-full object-cover" loading="lazy" />
         </div>
         <div className="container-x relative">
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -205,7 +205,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={1}>
               <div className="overflow-hidden rounded-3xl shadow-lift ring-1 ring-white/10">
-                <img src="/img/mmt-team.jpg" alt={t('home.mmtTitle')} loading="lazy" className="aspect-[16/9] w-full object-cover" />
+                <img src="/img/mmt-team.webp" alt={t('home.mmtTitle')} loading="lazy" className="aspect-[16/9] w-full object-cover" />
               </div>
             </Reveal>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
         eyebrow={t('home.execEyebrow')}
         title={t('home.execTitle')}
         desc={t('home.execDesc')}
-        image="/img/execution-site.jpg"
+        image="/img/execution-site.webp"
         alt="Construction site with engineers and machinery at work"
         items={execItems}
         reverse
@@ -226,8 +226,8 @@ export default function Home() {
         <div className="container-x">
           <div className="grid gap-5 sm:grid-cols-2">
             {[
-              { src: '/img/execution2.jpg', alt: 'Construction machinery and equipment on site' },
-              { src: '/img/execution3.jpg', alt: 'Engineering coordination and quality inspections at site' },
+              { src: '/img/execution2.webp', alt: 'Construction machinery and equipment on site' },
+              { src: '/img/execution3.webp', alt: 'Engineering coordination and quality inspections at site' },
             ].map((g, i) => (
               <Reveal key={g.src} delay={i}>
                 <div className="overflow-hidden rounded-2xl shadow-card">
@@ -244,7 +244,7 @@ export default function Home() {
         eyebrow={t('home.diagEyebrow')}
         title={t('home.diagTitle')}
         desc={t('home.diagDesc')}
-        image="/img/diagnosis.jpg"
+        image="/img/diagnosis.webp"
         alt="Maintenance technician with diagnostic tools on industrial site"
         items={diagItems}
         dark
@@ -257,7 +257,7 @@ export default function Home() {
         eyebrow={t('home.coordEyebrow')}
         title={t('home.coordTitle')}
         desc={t('home.coordDesc')}
-        image="/img/coordination.jpg"
+        image="/img/coordination.webp"
         alt="Project management team in meeting discussing construction plans"
         items={coordItems}
         reverse
@@ -268,7 +268,7 @@ export default function Home() {
       {/* Quality. Safety. Trust band */}
       <section className="relative overflow-hidden py-24 lg:py-32">
         <div className="absolute inset-0">
-          <img src="/img/safety.jpg" alt="" className="h-full w-full object-cover" loading="lazy" />
+          <img src="/img/safety.webp" alt="" className="h-full w-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-navy/85" />
         </div>
         <div className="container-x relative text-center">
@@ -320,7 +320,7 @@ export default function Home() {
       {company.statsVerified && (
       <section className="relative overflow-hidden bg-navy py-16">
         <div className="absolute inset-0 opacity-20">
-          <img src="/img/hero2.jpg" alt="" className="h-full w-full object-cover" loading="lazy" />
+          <img src="/img/hero2.webp" alt="" className="h-full w-full object-cover" loading="lazy" />
         </div>
         <div className="container-x relative">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
@@ -397,7 +397,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="relative mt-10 overflow-hidden rounded-2xl shadow-lift">
-              <img src="/img/we.png" alt="AL NAQEEB GROUP" className="h-auto w-full object-cover" />
+              <img loading="lazy" src="/img/we.webp" alt="AL NAQEEB GROUP" className="h-auto w-full object-cover" />
             </div>
           </Reveal>
         </div>

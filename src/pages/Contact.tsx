@@ -29,7 +29,7 @@ export default function Contact() {
   return (
     <>
       <PageHero eyebrow={t('page.contactEyebrow')} title={t('page.contactTitle')}
-        description={t('page.contactDesc')} crumb="Home" image="/img/about.jpg" />
+        description={t('page.contactDesc')} crumb="Home" image="/img/about.webp" />
 
       {cards.length > 0 && <section className="bg-surface py-16">
         <div className="container-x grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -78,7 +78,7 @@ export default function Contact() {
           {/* Map / location */}
           <div className="flex flex-col gap-6">
             <Reveal className="overflow-hidden rounded-3xl shadow-lift">
-              <img src="/img/hq-office.jpg" alt="Modern office lobby interior with corporate branding" loading="lazy" className="h-[280px] w-full object-cover" />
+              <img src="/img/hq-office.webp" alt="Modern office lobby interior with corporate branding" loading="lazy" className="h-[280px] w-full object-cover" />
             </Reveal>
             <Reveal className="rounded-3xl border border-slate-100 bg-surface p-8">
               <h3 className="text-xl font-bold text-navy">{t('common.address')}</h3>

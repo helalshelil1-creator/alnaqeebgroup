@@ -27,14 +27,14 @@ export default function About() {
   return (
     <>
       <PageHero eyebrow={t('page.aboutEyebrow')} title={t('page.aboutTitle')}
-        description={t('page.aboutDesc')} crumb="Home" image="/img/about.jpg" />
+        description={t('page.aboutDesc')} crumb="Home" image="/img/about.webp" />
 
       {/* Intro */}
       <section className="bg-white py-20">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <div className="overflow-hidden rounded-3xl shadow-lift">
-              <img src="/img/hero3.jpg" alt="AL NAQEEB engineers" loading="lazy" className="h-[420px] w-full object-cover" />
+              <img src="/img/hero3.webp" alt="AL NAQEEB engineers" loading="lazy" className="h-[420px] w-full object-cover" />
             </div>
           </Reveal>
           <div>

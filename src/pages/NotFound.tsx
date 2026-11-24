@@ -17,7 +17,7 @@ export default function NotFound() {
   return (
     <section className="relative overflow-hidden bg-navy">
       <div className="absolute inset-0">
-        <img src="/img/hero2.jpg" alt="" className="h-full w-full object-cover opacity-20" />
+        <img src="/img/hero2.webp" alt="" className="h-full w-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-navy-800" />
         <div className="bg-grid-dark absolute inset-0 opacity-25" aria-hidden="true" />
       </div>
