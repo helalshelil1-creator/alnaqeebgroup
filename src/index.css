@@ -313,12 +313,17 @@ html[dir='rtl'] ::-webkit-scrollbar-track { background: #eef1f5; }
   .reveal { opacity: 1; transform: none; }
 }
 
-/* Calligraphic accent for the English hero line (Arabic keeps Amiri) */
+/* Calligraphic accent for the English hero line (Arabic keeps Amiri).
+   The copy is stored in capitals; script capitals are unreadable, so it is shown
+   as a sentence (same words, no text change). */
 .hero-script { font-weight: 400; }
 html:not([lang='ar']) .hero-script {
+  display: block;
   font-family: 'Great Vibes', 'Snell Roundhand', cursive;
-  text-transform: none;
+  text-transform: lowercase;
   letter-spacing: 0;
-  font-size: 1.18em;
-  line-height: 1.15;
+  font-size: 1.3em;
+  line-height: 1.2;
+  margin-top: 0.15em;
 }
+html:not([lang='ar']) .hero-script::first-letter { text-transform: uppercase; }

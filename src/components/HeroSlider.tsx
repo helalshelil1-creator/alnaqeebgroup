@@ -117,7 +117,7 @@ export default function HeroSlider() {
               </motion.div>
 
               <motion.h1
-                className="mt-5 text-4xl font-extrabold uppercase leading-[1.06] text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+                className="mt-5 text-[1.7rem] font-bold uppercase leading-[1.12] tracking-[0.01em] text-white sm:text-4xl lg:text-5xl xl:text-6xl"
                 variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
               >
