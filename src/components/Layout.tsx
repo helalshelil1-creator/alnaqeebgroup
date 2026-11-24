@@ -18,7 +18,7 @@ function ScrollToTop() {
 export default function Layout() {
   const location = useLocation()
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col pb-[76px] sm:pb-0">
       <Preloader />
       <ScrollProgress />
       <ScrollToTop />

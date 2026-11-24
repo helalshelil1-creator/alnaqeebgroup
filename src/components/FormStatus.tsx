@@ -18,7 +18,7 @@ export default function FormStatus({
           initial={{ opacity: 0, y: 8, height: 0 }}
           animate={{ opacity: 1, y: 0, height: 'auto' }}
           exit={{ opacity: 0, y: -8, height: 0 }}
-          className="overflow-hidden"
+          className="scroll-mb-32 overflow-hidden"
           role="status"
           aria-live="polite"
         >

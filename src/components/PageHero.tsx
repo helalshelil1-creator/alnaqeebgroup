@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import Reveal from './Reveal'
 
 export default function PageHero({
@@ -15,6 +16,7 @@ export default function PageHero({
   crumb: string
   image?: string
 }) {
+  const { t } = useTranslation()
   return (
     <section className="relative overflow-hidden bg-navy">
       <div className="absolute inset-0">
@@ -29,7 +31,7 @@ export default function PageHero({
       <div className="container-x relative py-20 sm:py-24 lg:py-28">
         <Reveal>
           <nav className="flex items-center gap-2 text-sm text-white/60" aria-label="Breadcrumb">
-            <Link to="/" className="transition-colors hover:text-gold">{crumb === 'Home' ? 'Home' : crumb}</Link>
+            <Link to="/" className="transition-colors hover:text-gold">{crumb === 'Home' ? t('nav.home') : crumb}</Link>
             <ChevronRight size={14} className="rtl:rotate-180" />
             <span className="text-gold">{title}</span>
           </nav>

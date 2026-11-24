@@ -20,6 +20,8 @@ export function applyDocumentLang(lng: string) {
   html.setAttribute('lang', lng)
   html.setAttribute('dir', rtl ? 'rtl' : 'ltr')
   html.style.colorScheme = 'light'
+  const skip = document.querySelector('.skip-link')
+  if (skip) skip.textContent = rtl ? 'انتقل إلى المحتوى' : 'Skip to content'
 }
 
 i18n.use(initReactI18next).init({
