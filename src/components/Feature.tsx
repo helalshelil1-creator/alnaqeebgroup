@@ -34,7 +34,7 @@ export default function Feature({
               {eyebrow}
             </div>
           )}
-          <h2 className={`mt-3 text-3xl font-extrabold sm:text-4xl ${dark ? 'text-white' : 'text-navy'}`}>
+          <h2 className={`mt-3 text-3xl font-extrabold sm:text-4xl lg:text-5xl ${dark ? 'text-white' : 'text-navy'}`}>
             {title}
           </h2>
           {desc && (

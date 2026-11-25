@@ -25,7 +25,7 @@ export default function AboutSection() {
           {/* floating badge */}
           <div className="absolute -bottom-6 end-6 hidden rounded-2xl bg-navy px-6 py-5 text-white shadow-lift sm:block">
             <p className="text-3xl font-extrabold text-gold">24/7</p>
-            <p className="text-sm text-white/70">Engineering support</p>
+            <p className="text-sm text-white/70">{lang === 'ar' ? 'دعم هندسي' : 'Engineering support'}</p>
           </div>
           <div className="absolute -start-4 -top-4 -z-10 h-24 w-24 rounded-2xl bg-gold/20" />
         </Reveal>
@@ -34,7 +34,7 @@ export default function AboutSection() {
         <div>
           <Reveal>
             <div className="eyebrow"><span className="h-px w-8 bg-gold" />{t('home.servicesSubtitle')}</div>
-            <h2 className="mt-3 text-3xl font-extrabold text-navy sm:text-4xl">{t('home.aboutTitle')}</h2>
+            <h2 className="mt-3 text-3xl font-extrabold text-navy sm:text-4xl lg:text-5xl">{t('home.aboutTitle')}</h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">{t('home.aboutDesc')}</p>
           </Reveal>
 

@@ -25,25 +25,26 @@ export default function SectionHeading({
       )}
       {rule && center ? (
         <div className="mt-3 flex items-center justify-center gap-3 sm:gap-5">
-          <span className="h-px w-8 bg-gold/70 sm:w-16" />
+          <span className="h-px w-8 bg-gradient-to-l from-gold/80 to-transparent sm:w-16 rtl:bg-gradient-to-r" />
           <h2
-            className={`text-2xl font-extrabold sm:text-4xl ${
+            className={`text-2xl font-extrabold sm:text-4xl lg:text-5xl ${
               light ? 'text-white' : 'text-navy'
             }`}
           >
             {title}
           </h2>
-          <span className="h-px w-8 bg-gold/70 sm:w-16" />
+          <span className="h-px w-8 bg-gradient-to-r from-gold/80 to-transparent sm:w-16 rtl:bg-gradient-to-l" />
         </div>
       ) : (
         <h2
-          className={`mt-3 text-3xl font-extrabold sm:text-4xl ${
+          className={`mt-3 text-3xl font-extrabold sm:text-4xl lg:text-5xl ${
             light ? 'text-white' : 'text-navy'
           }`}
         >
           {title}
         </h2>
       )}
+      {rule && center && <span className="orn mx-auto mt-4" aria-hidden="true" />}
       {subtitle && (
         <p
           className={`mt-3 text-base sm:text-lg ${
