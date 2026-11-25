@@ -358,12 +358,8 @@ html[lang='ar'] .eyebrow { letter-spacing: 0; font-size: 0.95rem; }
 img { image-rendering: auto; }
 
 /* Home hero fills the visible screen below the sticky header (62px mobile, 82px from 640px). svh keeps it stable under mobile browser bars. */
-.hero-fill { --hh: 62px; --ih: min(56.25vw, 52vh); height: 100vh; height: 100svh; min-height: 600px; }
+.hero-fill { --hh: 0px; --ih: min(56.25vw, 52vh); height: 100vh; height: 100svh; min-height: 600px; }
 @supports (height: 1svh) { .hero-fill { --ih: min(56.25vw, 52svh); } }
-@media (min-width: 640px) { .hero-fill { --hh: 82px; } }
-/* Short phones: the header takes 62px, so the photo gives back 44px to keep the buttons above the action bar */
-@media (max-width: 639px) and (max-height: 739px) { .hero-fill { --ih: calc(min(56.25vw, 52vh) - 44px); } }
-@supports (height: 1svh) { @media (max-width: 639px) and (max-height: 739px) { .hero-fill { --ih: calc(min(56.25vw, 52svh) - 44px); } } }
 /* Desktop: the photo band starts below the 82px header so the nav sits on navy, never on the photo */
 @media (min-width: 1024px) { .hero-fill { --hh: 82px; --ih: min(56.25vw, 46vh); } }
 @supports (height: 1svh) { @media (min-width: 1024px) { .hero-fill { --ih: min(56.25vw, 46svh); } } }

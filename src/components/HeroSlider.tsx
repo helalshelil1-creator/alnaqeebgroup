@@ -128,8 +128,22 @@ export default function HeroSlider() {
       {/* Background image with slow Ken-Burns drift */}
       <AnimatePresence initial={false}>
         <motion.div
+          key={`bg-${i}`}
+          className="absolute inset-0 lg:hidden"
+          style={{ WebkitMaskImage: 'linear-gradient(to bottom, #000 0%, #000 30%, transparent 85%)', maskImage: 'linear-gradient(to bottom, #000 0%, #000 30%, transparent 85%)' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.9, ease: 'easeInOut' }}
+          aria-hidden="true"
+        >
+          <img src={SLIDES[i].image} alt="" className="h-full w-full scale-125 object-cover opacity-55 blur-2xl" />
+        </motion.div>
+      </AnimatePresence>
+      <AnimatePresence initial={false}>
+        <motion.div
           key={i}
-          className="absolute inset-x-0 top-[var(--hh)] h-[var(--ih)]"
+          className="absolute inset-x-0 top-[var(--hh)] h-[var(--ih)] [mask-image:linear-gradient(to_bottom,#000_86%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,#000_86%,transparent)] lg:[mask-image:none] lg:[-webkit-mask-image:none]"
           initial={{ opacity: 0, x: dir > 0 ? 72 : -72 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: dir > 0 ? -72 : 72 }}
@@ -161,7 +175,8 @@ export default function HeroSlider() {
 
       {/* Overlays */}
       {/* Phones: the photo is shown whole (16:9, no crop) above the text panel */}
-      <div className="absolute inset-x-0 top-[calc(var(--hh)+var(--ih)-40px)] h-10 bg-gradient-to-b from-transparent to-navy" aria-hidden="true" />
+      <div className="absolute inset-x-0 top-[calc(var(--hh)+var(--ih)-40px)] hidden h-10 bg-gradient-to-b from-transparent to-navy lg:block" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[5] h-24 bg-gradient-to-b from-navy/75 to-transparent lg:hidden" aria-hidden="true" />
       <div className="bg-grid-dark absolute inset-0 opacity-30" aria-hidden="true" />
 
       {/* Content */}
