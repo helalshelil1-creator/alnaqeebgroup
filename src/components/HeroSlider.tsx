@@ -66,7 +66,7 @@ export default function HeroSlider() {
       <AnimatePresence initial={false}>
         <motion.div
           key={i}
-          className="absolute inset-0"
+          className="absolute inset-x-0 top-0 h-[var(--ih)] sm:inset-0 sm:h-auto"
           initial={{ opacity: 0, x: dir > 0 ? 72 : -72 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: dir > 0 ? -72 : 72 }}
@@ -91,14 +91,16 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/25" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-navy/45" />
+      <div className="absolute inset-0 hidden bg-gradient-to-r from-navy via-navy/85 to-navy/25 sm:block" />
+      <div className="absolute inset-0 hidden bg-gradient-to-t from-navy/90 via-transparent to-navy/45 sm:block" />
+      {/* Phones: the photo is shown whole (16:9, no crop) above the text panel */}
+      <div className="absolute inset-x-0 top-[calc(var(--ih)-40px)] h-10 bg-gradient-to-b from-transparent to-navy sm:hidden" aria-hidden="true" />
       <div className="bg-grid-dark absolute inset-0 opacity-30" aria-hidden="true" />
 
       {/* Content */}
-      <div className="container-x hero-fill relative flex items-center">
+      <div className="container-x hero-fill relative flex items-center pt-[var(--ih)] sm:pt-0">
         <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent sm:hidden" aria-hidden="true" />
-        <div className="max-w-3xl py-24 sm:px-14 xl:px-0">
+        <div className="max-w-3xl pb-20 pt-5 sm:py-24 sm:px-14 xl:px-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={i}
@@ -108,7 +110,7 @@ export default function HeroSlider() {
               variants={{ show: { transition: { staggerChildren: 0.09 } } }}
             >
               <motion.div
-                className="eyebrow"
+                className="eyebrow hidden sm:inline-flex"
                 variants={{ hidden: { opacity: 0, y: 22 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               >
@@ -127,7 +129,7 @@ export default function HeroSlider() {
               </motion.h1>
 
               <motion.div
-                className="mt-8 flex flex-wrap items-center gap-4"
+                className="mt-5 flex flex-wrap items-center gap-3 sm:mt-8 sm:gap-4 max-sm:[&_a]:px-4 max-sm:[&_a]:py-2.5 max-sm:[&_a]:text-sm"
                 variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
@@ -195,7 +197,7 @@ export default function HeroSlider() {
       </button>
 
       {/* Dots / progress */}
-      <div className="absolute bottom-24 start-1/2 z-10 sm:bottom-6 flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
+      <div className="absolute top-[calc(var(--ih)-22px)] start-1/2 z-10 sm:top-auto sm:bottom-6 flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
         {SLIDES.map((_, idx) => (
           <button
             key={idx}
