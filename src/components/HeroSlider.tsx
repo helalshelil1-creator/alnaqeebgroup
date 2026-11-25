@@ -126,14 +126,6 @@ export default function HeroSlider() {
                 <span className="text-gradient-gold">{title2}</span>
               </motion.h1>
 
-              <motion.p
-                className="hero-desc mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
-                variants={{ hidden: { opacity: 0, y: 26 }, show: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              >
-                {t('hero.desc')}
-              </motion.p>
-
               <motion.div
                 className="mt-8 flex flex-wrap items-center gap-4"
                 variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } }}
