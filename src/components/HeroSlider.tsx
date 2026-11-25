@@ -98,7 +98,7 @@ export default function HeroSlider() {
       {/* Content */}
       <div className="container-x relative flex min-h-[600px] items-center lg:h-[92vh]">
         <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent sm:hidden" aria-hidden="true" />
-        <div className="max-w-3xl py-24">
+        <div className="max-w-3xl py-24 sm:px-14 xl:px-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={i}
