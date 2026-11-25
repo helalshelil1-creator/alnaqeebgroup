@@ -65,7 +65,7 @@ export default function Contact() {
                 <Field label={t('forms.message')} name="message" type="textarea" required rows={5} value={form.values.message} onChange={(v) => form.setField('message', v)} error={form.errors.message} />
               </div>
               <div className="sm:col-span-2">
-                <button type="submit" disabled={form.submitting} className="btn-navy w-full">
+                <button type="submit" disabled={form.submitting} className="btn-gold w-full">
                   {form.submitting ? form.sendingLabel : isPersonal ? t('forms.demoSubmit') : t('forms.submitContact')}
                 </button>
               </div>

@@ -65,7 +65,7 @@ export default function RequestQuote() {
                 <s.icon size={22} />
               </span>
               <div>
-                <p className="text-xs font-bold text-gold">Step {idx + 1}</p>
+                <p className="text-xs font-bold text-gold">{i18n.language === 'ar' ? 'الخطوة' : 'Step'} {idx + 1}</p>
                 <p className="font-semibold text-ink">{s[lang]}</p>
               </div>
             </Reveal>
