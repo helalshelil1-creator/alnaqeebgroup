@@ -325,16 +325,16 @@ html[dir='rtl'] ::-webkit-scrollbar-track { background: #eef1f5; }
 }
 
 /* Arabic home hero only: the original bold Cairo display heading and description, at the original sizes. */
-html[lang='ar'] h1.hero-h1 {
+html[lang='ar'] .hero-h1 {
   font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
   font-weight: 800;
   font-size: 2.25rem;
   line-height: 1.3;
   letter-spacing: 0;
 }
-@media (min-width: 640px) { html[lang='ar'] h1.hero-h1 { font-size: 3rem; } }
-@media (min-width: 1024px) { html[lang='ar'] h1.hero-h1 { font-size: 2.75rem; } }
-@media (min-width: 1280px) { html[lang='ar'] h1.hero-h1 { font-size: 3.25rem; } }
+@media (min-width: 640px) { html[lang='ar'] .hero-h1 { font-size: 3rem; } }
+@media (min-width: 1024px) { html[lang='ar'] .hero-h1 { font-size: 2.75rem; } }
+@media (min-width: 1280px) { html[lang='ar'] .hero-h1 { font-size: 3.25rem; } }
 html[lang='ar'] main p.hero-desc {
   font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
   font-size: 1rem;
@@ -368,11 +368,11 @@ img { image-rendering: auto; }
 
 /* Short phones: tighten the headline so the buttons stay above the fixed action bar. */
 @media (max-width: 639px) and (max-height: 680px) {
-  h1.hero-h1, html[lang='ar'] h1.hero-h1 { font-size: 1.7rem; line-height: 1.25; }
+  .hero-h1, html[lang='ar'] .hero-h1 { font-size: 1.7rem; line-height: 1.25; }
 }
 
 /* English typography: bold serif hero, comfortable Inter body */
-html[lang='en'] h1.hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 800; letter-spacing: -0.015em; }
+html[lang='en'] .hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 800; letter-spacing: -0.015em; }
 html[lang='en'] main p { line-height: 1.75; }
 html[lang='en'] h2, html[lang='en'] h3 { font-weight: 700; line-height: 1.2; }
 
