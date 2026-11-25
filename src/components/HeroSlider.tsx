@@ -23,9 +23,13 @@ const WORD_MS = 240
 
 /** Headline that writes itself word by word from zero. Mounted fresh on every slide change.
  *  Every word is laid out from the start (hidden), so nothing moves while it types. */
-function TypedH1({ title1, title2 }: { title1: string; title2: string }) {
-  const w1 = title1.split(/\s+/).filter(Boolean)
-  const w2 = title2.split(/\s+/).filter(Boolean)
+type Heading = { title1: string; title2: string }
+const words = (x: string) => x.split(/\s+/).filter(Boolean)
+
+function TypedH1({ all, active }: { all: Heading[]; active: number }) {
+  const cur = all[active]
+  const w1 = words(cur.title1)
+  const w2 = words(cur.title2)
   const total = w1.length + w2.length
   const [n, setN] = useState(0)
   useEffect(() => {
@@ -56,12 +60,25 @@ function TypedH1({ title1, title2 }: { title1: string; title2: string }) {
         {k < ws.length - 1 ? ' ' : ''}
       </span>
     ))
+  // All headlines share one grid cell, so the block is always as tall as the longest one and nothing moves between slides.
   return (
-    <h1 className="hero-h1 mt-5 text-[1.7rem] font-bold leading-[1.12] text-white sm:text-4xl xl:text-5xl">
-      {line(w1, 0, false)}
-      <br />
-      {line(w2, w1.length, true)}
-    </h1>
+    <div className="mt-5 grid">
+      {all.map((h, k) =>
+        k === active ? (
+          <h1 key={k} className="hero-h1 text-[1.7rem] font-bold leading-[1.12] text-white sm:text-4xl xl:text-5xl [grid-area:1/1]">
+            {line(w1, 0, false)}
+            <br />
+            {line(w2, w1.length, true)}
+          </h1>
+        ) : (
+          <div key={k} aria-hidden="true" className="hero-h1 invisible select-none text-[1.7rem] font-bold leading-[1.12] sm:text-4xl xl:text-5xl [grid-area:1/1]">
+            {h.title1}
+            <br />
+            {h.title2}
+          </div>
+        )
+      )}
+    </div>
   )
 }
 
@@ -103,8 +120,8 @@ export default function HeroSlider() {
     }
   }, [resetAutoplay])
 
-  const title1 = t('hero.title1')
-  const title2 = t('hero.title2')
+  const hs = t('hero.slides', { returnObjects: true }) as unknown
+  const headings: Heading[] = Array.isArray(hs) && hs.length ? (hs as Heading[]) : [{ title1: t('hero.title1'), title2: t('hero.title2') }]
 
   return (
     <section className="relative overflow-hidden bg-navy hero-fill">
@@ -179,7 +196,7 @@ export default function HeroSlider() {
                 {t('hero.eyebrow')}
               </motion.div>
 
-              <TypedH1 title1={title1} title2={title2} />
+              <TypedH1 all={headings} active={i % headings.length} />
 
               <motion.div
                 className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:mt-8 sm:gap-4 max-sm:[&_a]:px-4 max-sm:[&_a]:py-2.5 max-sm:[&_a]:text-sm"
