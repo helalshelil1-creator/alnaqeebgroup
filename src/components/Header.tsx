@@ -15,6 +15,8 @@ const NAV = [
   { to: '/contact', key: 'contact' },
 ]
 
+const NAV_OVER = '!text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.6)] hover:!text-gold'
+
 export default function Header() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language === 'ar' ? 'ar' : 'en'
@@ -24,6 +26,9 @@ export default function Header() {
   const [mobileSvcOpen, setMobileSvcOpen] = useState(false)
   const location = useLocation()
   const svcRef = useRef<HTMLDivElement>(null)
+  const isHome = location.pathname === '/'
+  // Over the home photo the header is see-through; links go light so they read on the photo.
+  const over = isHome && !scrolled
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -55,10 +60,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        className={`${isHome ? 'fixed inset-x-0' : 'sticky'} top-0 z-50 w-full transition-all duration-300 ${
           scrolled
             ? 'bg-white/85 shadow-[0_6px_24px_-12px_rgba(6,43,82,0.28)] backdrop-blur-xl'
-            : 'bg-white'
+            : 'bg-transparent'
         }`}
       >
         {/* gold accent line that appears on scroll */}
@@ -74,7 +79,7 @@ export default function Header() {
             <img
               src={company.logo}
               alt={`${company.name} — ${company.nameAr}`}
-              className={`h-12 w-auto object-contain transition-all duration-300 sm:h-[68px] ${scrolled ? 'sm:h-16' : ''}`}
+              className={`h-12 w-auto object-contain transition-all duration-300 sm:h-[68px] ${scrolled ? 'sm:h-16' : ''} ${over ? '[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.95))_drop-shadow(0_0_12px_rgba(255,255,255,0.6))]' : ''}`}
               width={136}
               height={68}
             />
@@ -90,7 +95,7 @@ export default function Header() {
                 >
                   <NavLink
                     to="/services"
-                    className={({ isActive }) => `nav-link flex items-center gap-1 ${isActive ? 'active' : ''}`}
+                    className={({ isActive }) => `nav-link flex items-center gap-1 ${isActive ? 'active' : ''} ${over ? NAV_OVER : ''}`}
                   >
                     {t('nav.services')}
                     <ChevronDown size={15} className={`transition-transform ${svcOpen ? 'rotate-180' : ''}`} />
@@ -124,7 +129,7 @@ export default function Header() {
                 </div>
               ) : (
                 <NavLink key={item.key} to={item.to} end={item.to === '/'}
-                  className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                  className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${over ? NAV_OVER : ''}`}
                 >
                   {t(`nav.${item.key}`)}
                 </NavLink>
@@ -136,7 +141,7 @@ export default function Header() {
           <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={toggleLang}
-              className="hidden items-center gap-1.5 rounded-full border border-slate-200 px-3 py-2 text-sm font-semibold text-navy transition-colors hover:border-navy hover:bg-surface sm:inline-flex"
+              className={`hidden items-center gap-1.5 rounded-full border px-3 py-2 text-sm font-semibold transition-colors sm:inline-flex ${over ? 'border-white/70 text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.5)] hover:bg-white/15' : 'border-slate-200 text-navy hover:border-navy hover:bg-surface'}`}
               aria-label="Switch language"
             >
               <Globe size={16} />

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'framer-motion'
+import { company } from '../data/site'
 import { ChevronLeft, ChevronRight, ArrowRight, Mouse } from 'lucide-react'
 
 const SLIDES = [
@@ -104,9 +105,20 @@ export default function HeroSlider() {
       <div className="bg-grid-dark absolute inset-0 opacity-30" aria-hidden="true" />
 
       {/* Content */}
-      <div className="container-x hero-fill relative flex items-center pt-[var(--ih)] lg:pt-0 rtl:lg:justify-end">
+      <div className="container-x hero-fill relative flex items-center pt-[var(--ih)] lg:pt-[82px] rtl:lg:justify-end">
         <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent hidden" aria-hidden="true" />
         <div className="max-w-3xl pb-20 pt-5 sm:px-14 lg:py-24 xl:px-0">
+          {/* Phones with room: the logo pulses with a moving shine above the headline */}
+          <div className="mb-4 hidden justify-center [@media(max-width:1023px)_and_(min-height:740px)]:flex" aria-hidden="true">
+            <span
+              className="logo-pulse relative block h-[72px] w-[144px]"
+              style={{ ['--logo' as string]: `url(${company.logo})` }}
+            >
+              <img src={company.logo} alt="" width={144} height={72} className="h-full w-full object-contain" />
+              <span className="logo-shine absolute inset-0" />
+            </span>
+          </div>
+
           <AnimatePresence mode="wait">
             <motion.div
               key={i}
