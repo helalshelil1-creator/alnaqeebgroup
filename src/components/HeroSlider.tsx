@@ -66,12 +66,18 @@ export default function HeroSlider() {
       <AnimatePresence initial={false}>
         <motion.div
           key={i}
-          className="absolute inset-x-0 top-0 h-[var(--ih)] sm:inset-0 sm:h-auto"
+          className="absolute inset-x-0 top-0 h-[var(--ih)] lg:inset-0 lg:h-auto"
           initial={{ opacity: 0, x: dir > 0 ? 72 : -72 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: dir > 0 ? -72 : 72 }}
           transition={{ duration: 0.9, ease: 'easeInOut' }}
         >
+          <img
+            src={SLIDES[i].image}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 hidden h-full w-full scale-110 object-cover opacity-50 blur-2xl lg:block"
+          />
           <motion.img
             src={SLIDES[i].image}
             srcSet={`${small(SLIDES[i].image)} 800w, ${SLIDES[i].image} 1600w`}
@@ -82,7 +88,7 @@ export default function HeroSlider() {
             loading="eager"
             decoding="async"
             fetchPriority={i === 0 ? 'high' : 'auto'}
-            className="h-full w-full object-cover"
+            className="relative h-full w-full object-cover lg:object-contain"
             initial={{ scale: 1.14 }}
             animate={{ scale: 1 }}
             transition={{ duration: 5, ease: [0.22, 1, 0.36, 1] }}
@@ -91,16 +97,16 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* Overlays */}
-      <div className="absolute inset-0 hidden bg-gradient-to-r from-navy via-navy/85 to-navy/25 sm:block" />
-      <div className="absolute inset-0 hidden bg-gradient-to-t from-navy/90 via-transparent to-navy/45 sm:block" />
+      <div className="absolute inset-0 hidden bg-gradient-to-r from-navy/90 via-navy/45 to-transparent lg:block" />
+      <div className="absolute inset-x-0 bottom-0 hidden h-24 bg-gradient-to-t from-navy/70 to-transparent lg:block" />
       {/* Phones: the photo is shown whole (16:9, no crop) above the text panel */}
-      <div className="absolute inset-x-0 top-[calc(var(--ih)-40px)] h-10 bg-gradient-to-b from-transparent to-navy sm:hidden" aria-hidden="true" />
+      <div className="absolute inset-x-0 top-[calc(var(--ih)-40px)] h-10 bg-gradient-to-b from-transparent to-navy lg:hidden" aria-hidden="true" />
       <div className="bg-grid-dark absolute inset-0 opacity-30" aria-hidden="true" />
 
       {/* Content */}
-      <div className="container-x hero-fill relative flex items-center pt-[var(--ih)] sm:pt-0">
-        <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent sm:hidden" aria-hidden="true" />
-        <div className="max-w-3xl pb-20 pt-5 sm:py-24 sm:px-14 xl:px-0">
+      <div className="container-x hero-fill relative flex items-center pt-[var(--ih)] lg:pt-0 rtl:lg:justify-end">
+        <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent hidden" aria-hidden="true" />
+        <div className="max-w-3xl pb-20 pt-5 sm:px-14 lg:py-24 xl:px-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={i}
@@ -119,7 +125,7 @@ export default function HeroSlider() {
               </motion.div>
 
               <motion.h1
-                className="hero-h1 mt-5 text-[1.7rem] font-bold uppercase leading-[1.12] tracking-[0.01em] text-white sm:text-4xl lg:text-5xl xl:text-6xl"
+                className="hero-h1 mt-5 text-[1.7rem] font-bold leading-[1.12] text-white sm:text-4xl lg:text-5xl xl:text-6xl"
                 variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
               >
@@ -147,7 +153,7 @@ export default function HeroSlider() {
 
           {/* Scroll indicator */}
           <motion.div
-            className="mt-14 hidden items-center gap-2 text-white/70 sm:flex"
+            className="mt-14 hidden items-center gap-2 text-white/70 lg:flex"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.6 }}
@@ -181,7 +187,7 @@ export default function HeroSlider() {
           resetAutoplay()
         }}
         aria-label={t('hero.prev')}
-        className="absolute start-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy sm:grid"
+        className="absolute start-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy lg:grid"
       >
         <ChevronLeft size={22} />
       </button>
@@ -191,13 +197,13 @@ export default function HeroSlider() {
           resetAutoplay()
         }}
         aria-label={t('hero.next')}
-        className="absolute end-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy sm:grid"
+        className="absolute end-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy lg:grid"
       >
         <ChevronRight size={22} />
       </button>
 
       {/* Dots / progress */}
-      <div className="absolute top-[calc(var(--ih)-22px)] start-1/2 z-10 sm:top-auto sm:bottom-6 flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
+      <div className="absolute top-[calc(var(--ih)-22px)] start-1/2 z-10 lg:top-auto lg:bottom-6 flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
         {SLIDES.map((_, idx) => (
           <button
             key={idx}

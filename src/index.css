@@ -7,6 +7,7 @@
 @import '@fontsource/cairo/latin-400.css';
 @import '@fontsource/cairo/latin-700.css';
 @import '@fontsource/playfair-display/latin-700.css';
+@import '@fontsource/playfair-display/latin-800.css';
 @import '@fontsource/amiri/arabic-400.css';
 @import '@fontsource/amiri/arabic-700.css';
 
@@ -363,3 +364,8 @@ img { image-rendering: auto; }
 @media (max-width: 639px) and (max-height: 680px) {
   h1.hero-h1, html[lang='ar'] h1.hero-h1 { font-size: 1.7rem; line-height: 1.25; }
 }
+
+/* English typography: bold serif hero, comfortable Inter body */
+html[lang='en'] h1.hero-h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 800; letter-spacing: -0.015em; }
+html[lang='en'] main p { line-height: 1.75; }
+html[lang='en'] h2, html[lang='en'] h3 { font-weight: 700; line-height: 1.2; }
