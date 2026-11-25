@@ -117,7 +117,7 @@ export default function HeroSlider() {
               </motion.div>
 
               <motion.h1
-                className="mt-5 text-[1.7rem] font-bold uppercase leading-[1.12] tracking-[0.01em] text-white sm:text-4xl lg:text-5xl xl:text-6xl"
+                className="hero-h1 mt-5 text-[1.7rem] font-bold uppercase leading-[1.12] tracking-[0.01em] text-white sm:text-4xl lg:text-5xl xl:text-6xl"
                 variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
               >
@@ -127,7 +127,7 @@ export default function HeroSlider() {
               </motion.h1>
 
               <motion.p
-                className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
+                className="hero-desc mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
                 variants={{ hidden: { opacity: 0, y: 26 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >

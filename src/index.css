@@ -3,6 +3,7 @@
 @import '@fontsource/inter/latin-700.css';
 @import '@fontsource/cairo/arabic-400.css';
 @import '@fontsource/cairo/arabic-700.css';
+@import '@fontsource/cairo/arabic-800.css';
 @import '@fontsource/cairo/latin-400.css';
 @import '@fontsource/cairo/latin-700.css';
 @import '@fontsource/playfair-display/latin-700.css';
@@ -319,3 +320,21 @@ html[dir='rtl'] ::-webkit-scrollbar-track { background: #eef1f5; }
   .animate-pulse-ring, .animate-shimmer { animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Arabic home hero only: the original bold Cairo display heading and description, at the original sizes. */
+html[lang='ar'] h1.hero-h1 {
+  font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+@media (min-width: 640px) { html[lang='ar'] h1.hero-h1 { font-size: 3rem; } }
+@media (min-width: 1024px) { html[lang='ar'] h1.hero-h1 { font-size: 3.75rem; } }
+@media (min-width: 1280px) { html[lang='ar'] h1.hero-h1 { font-size: 4.5rem; } }
+html[lang='ar'] main p.hero-desc {
+  font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+@media (min-width: 640px) { html[lang='ar'] main p.hero-desc { font-size: 1.125rem; } }
