@@ -36,8 +36,8 @@ export default {
   },
   hero: {
     eyebrow: 'AL NAQEEB GROUP',
-    title1: 'DEVELOPING WHAT DESERVES TO REMAIN.',
-    title2: 'ENGINEERING THE FUTURE.',
+    title1: 'Developing what deserves to remain.',
+    title2: 'Engineering the future.',
     desc: 'AL NAQEEB GROUP is a contracting company in 6th of October City, Egypt — delivering integrated electrical, mechanical, HVAC, fire fighting, control panel, ELV and maintenance projects through an integrated, highly experienced engineering team.',
     prev: 'Previous slide',
     next: 'Next slide',

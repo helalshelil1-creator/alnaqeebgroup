@@ -29,9 +29,10 @@ export default function InstallPrompt() {
     window.addEventListener('beforeinstallprompt', onPrompt)
     window.addEventListener('appinstalled', onInstalled)
     if (ios) setMode('ios')
-    // Wait until the splash is gone and the visitor has had a moment on the page.
-    const id = window.setTimeout(() => { setOpen(true) }, 6000)
-    return () => { clearTimeout(id); window.removeEventListener('beforeinstallprompt', onPrompt); window.removeEventListener('appinstalled', onInstalled) }
+    // Never over the first screen: only after the visitor has scrolled past the hero.
+    const onScroll = () => { if (window.scrollY > window.innerHeight * 0.7) { setOpen(true); window.removeEventListener('scroll', onScroll) } }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('beforeinstallprompt', onPrompt); window.removeEventListener('appinstalled', onInstalled) }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
