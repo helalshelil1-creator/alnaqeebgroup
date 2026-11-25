@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
+import useAutoBounce from '../lib/useAutoBounce'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight, CheckCircle2, Compass, PenTool, Wrench, ClipboardCheck, Phone, Mail, MessageCircle } from 'lucide-react'
 import HeroSlider from '../components/HeroSlider'
@@ -18,6 +20,8 @@ import { Icon } from '../lib/icons'
 
 export default function Home() {
   const { t, i18n } = useTranslation()
+  const stripRef = useRef<HTMLUListElement>(null)
+  useAutoBounce(stripRef)
   const lang = i18n.language === 'ar' ? 'ar' : 'en'
   usePageMeta(t('page.homeTitle'), t('page.homeDesc'))
 
@@ -83,7 +87,7 @@ export default function Home() {
           <p className="mx-auto mt-4 max-w-2xl text-center text-muted">{t('home.servicesIntro')}</p>
 
           {/* Seven uniform portrait cards: one row on wide screens, snap-scroll strip below */}
-          <ul className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 lg:grid lg:snap-none lg:grid-cols-4 lg:overflow-visible lg:pb-0 xl:grid-cols-7">
+          <ul ref={stripRef} className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 lg:grid lg:snap-none lg:grid-cols-4 lg:overflow-visible lg:pb-0 xl:grid-cols-7">
             {services.map((s, idx) => (
               <ServiceCard key={s.slug} service={s} index={idx % 7} />
             ))}

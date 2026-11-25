@@ -6,6 +6,11 @@ import ar from './locales/ar'
 export const STORAGE_KEY = 'alnaqeeb.lang'
 
 const getInitial = (): 'en' | 'ar' => {
+  // Explicit ?lng=ar|en in the URL wins (the hreflang links point to it), then saved choice, then device language.
+  try {
+    const q = new URLSearchParams(window.location.search).get('lng')
+    if (q === 'en' || q === 'ar') return q
+  } catch { /* ignore */ }
   try {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved === 'en' || saved === 'ar') return saved
