@@ -61,7 +61,7 @@ export default function HeroSlider() {
   const title2 = t('hero.title2')
 
   return (
-    <section className="relative min-h-[600px] overflow-hidden bg-navy lg:h-[92vh] lg:min-h-[680px]">
+    <section className="relative overflow-hidden bg-navy hero-fill">
       {/* Background image with slow Ken-Burns drift */}
       <AnimatePresence initial={false}>
         <motion.div
@@ -96,7 +96,7 @@ export default function HeroSlider() {
       <div className="bg-grid-dark absolute inset-0 opacity-30" aria-hidden="true" />
 
       {/* Content */}
-      <div className="container-x relative flex min-h-[600px] items-center lg:h-[92vh]">
+      <div className="container-x hero-fill relative flex items-center">
         <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent sm:hidden" aria-hidden="true" />
         <div className="max-w-3xl py-24 sm:px-14 xl:px-0">
           <AnimatePresence mode="wait">
@@ -195,7 +195,7 @@ export default function HeroSlider() {
       </button>
 
       {/* Dots / progress */}
-      <div className="absolute bottom-6 start-1/2 z-10 flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
+      <div className="absolute bottom-24 start-1/2 z-10 sm:bottom-6 flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
         {SLIDES.map((_, idx) => (
           <button
             key={idx}

@@ -355,3 +355,7 @@ html[lang='ar'] main h3 { font-size: 1.18em; line-height: 1.5; }
 .eyebrow { letter-spacing: 0.2em; }
 html[lang='ar'] .eyebrow { letter-spacing: 0; font-size: 0.95rem; }
 img { image-rendering: auto; }
+
+/* Home hero fills the visible screen below the sticky header (62px mobile, 82px from 640px). svh keeps it stable under mobile browser bars. */
+.hero-fill { height: calc(100vh - 62px); height: calc(100svh - 62px); min-height: 540px; }
+@media (min-width: 640px) { .hero-fill { height: calc(100vh - 82px); height: calc(100svh - 82px); min-height: 600px; } }
