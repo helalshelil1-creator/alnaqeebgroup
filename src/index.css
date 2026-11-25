@@ -360,6 +360,8 @@ img { image-rendering: auto; }
 /* Home hero fills the visible screen below the sticky header (62px mobile, 82px from 640px). svh keeps it stable under mobile browser bars. */
 .hero-fill { --hh: 0px; --ih: min(56.25vw, 52vh); height: 100vh; height: 100svh; min-height: 600px; }
 @supports (height: 1svh) { .hero-fill { --ih: min(56.25vw, 52svh); } }
+/* Phones and tablets: no fixed screen height, so the text flows right below the photo with no empty band */
+@media (max-width: 1023px) { .hero-fill { height: auto; min-height: 0; } }
 /* Desktop: the photo band starts below the 82px header so the nav sits on navy, never on the photo */
 @media (min-width: 1024px) { .hero-fill { --hh: 82px; --ih: min(56.25vw, 46vh); } }
 @supports (height: 1svh) { @media (min-width: 1024px) { .hero-fill { --ih: min(56.25vw, 46svh); } } }
