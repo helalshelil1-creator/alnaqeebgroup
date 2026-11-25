@@ -79,7 +79,7 @@ export default function Header() {
             <img
               src={company.logo}
               alt={`${company.name} — ${company.nameAr}`}
-              className={`h-12 w-auto object-contain transition-all duration-300 sm:h-[68px] ${scrolled ? 'sm:h-16' : ''} ${over ? '[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.95))_drop-shadow(0_0_12px_rgba(255,255,255,0.6))]' : ''}`}
+              className={`${over ? 'max-lg:invisible' : ''} h-12 w-auto object-contain transition-all duration-300 sm:h-[68px] ${scrolled ? 'sm:h-16' : ''} ${over ? '[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.95))_drop-shadow(0_0_12px_rgba(255,255,255,0.6))]' : ''}`}
               width={136}
               height={68}
             />

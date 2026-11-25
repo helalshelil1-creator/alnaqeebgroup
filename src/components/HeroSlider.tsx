@@ -19,6 +19,52 @@ const AUTOPLAY_MS = 5000
 /** 800px variant for phones (…-800.webp) next to the 1600px one. */
 const small = (src: string) => src.replace(/\.webp$/, '-800.webp')
 
+const WORD_MS = 240
+
+/** Headline that writes itself word by word from zero. Mounted fresh on every slide change.
+ *  Every word is laid out from the start (hidden), so nothing moves while it types. */
+function TypedH1({ title1, title2 }: { title1: string; title2: string }) {
+  const w1 = title1.split(/\s+/).filter(Boolean)
+  const w2 = title2.split(/\s+/).filter(Boolean)
+  const total = w1.length + w2.length
+  const [n, setN] = useState(0)
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setN(total)
+      return
+    }
+    let iv: number | undefined
+    const st = window.setTimeout(() => {
+      iv = window.setInterval(() => {
+        setN((v) => {
+          if (v + 1 >= total && iv) clearInterval(iv)
+          return Math.min(v + 1, total)
+        })
+      }, WORD_MS)
+    }, 500)
+    return () => { clearTimeout(st); if (iv) clearInterval(iv) }
+  }, [total])
+  const word = (wd: string, k: number, gold: boolean) => (
+    <span key={k} className={`inline-block transition-opacity duration-300 ${gold ? 'text-gradient-gold' : ''}`} style={{ opacity: k < n ? 1 : 0 }}>
+      {wd}
+    </span>
+  )
+  const line = (ws: string[], off: number, gold: boolean) =>
+    ws.map((wd, k) => (
+      <span key={k}>
+        {word(wd, off + k, gold)}
+        {k < ws.length - 1 ? ' ' : ''}
+      </span>
+    ))
+  return (
+    <h1 className="hero-h1 mt-5 text-[1.7rem] font-bold leading-[1.12] text-white sm:text-4xl xl:text-5xl">
+      {line(w1, 0, false)}
+      <br />
+      {line(w2, w1.length, true)}
+    </h1>
+  )
+}
+
 export default function HeroSlider() {
   const { t } = useTranslation()
   const [i, setI] = useState(0)
@@ -66,7 +112,7 @@ export default function HeroSlider() {
       <AnimatePresence initial={false}>
         <motion.div
           key={i}
-          className="absolute inset-x-0 top-0 h-[var(--ih)]"
+          className="absolute inset-x-0 top-[var(--hh)] h-[var(--ih)]"
           initial={{ opacity: 0, x: dir > 0 ? 72 : -72 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: dir > 0 ? -72 : 72 }}
@@ -98,11 +144,11 @@ export default function HeroSlider() {
 
       {/* Overlays */}
       {/* Phones: the photo is shown whole (16:9, no crop) above the text panel */}
-      <div className="absolute inset-x-0 top-[calc(var(--ih)-40px)] h-10 bg-gradient-to-b from-transparent to-navy" aria-hidden="true" />
+      <div className="absolute inset-x-0 top-[calc(var(--hh)+var(--ih)-40px)] h-10 bg-gradient-to-b from-transparent to-navy" aria-hidden="true" />
       <div className="bg-grid-dark absolute inset-0 opacity-30" aria-hidden="true" />
 
       {/* Content */}
-      <div className="container-x hero-fill relative flex items-center pt-[var(--ih)]">
+      <div className="container-x hero-fill relative flex items-center pt-[calc(var(--hh)+var(--ih))]">
         <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent hidden" aria-hidden="true" />
         <div className="mx-auto w-full max-w-3xl pb-20 pt-5 text-center sm:px-14 lg:max-w-5xl lg:pb-10 xl:px-0">
           {/* Phones: the logo (smaller on short screens) pulses with a moving shine above the headline */}
@@ -133,15 +179,7 @@ export default function HeroSlider() {
                 {t('hero.eyebrow')}
               </motion.div>
 
-              <motion.h1
-                className="hero-h1 mt-5 text-[1.7rem] font-bold leading-[1.12] text-white sm:text-4xl xl:text-5xl"
-                variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              >
-                {title1}
-                <br />
-                <span className="text-gradient-gold">{title2}</span>
-              </motion.h1>
+              <TypedH1 title1={title1} title2={title2} />
 
               <motion.div
                 className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:mt-8 sm:gap-4 max-sm:[&_a]:px-4 max-sm:[&_a]:py-2.5 max-sm:[&_a]:text-sm"
@@ -176,7 +214,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Slide counter */}
-      <div className="absolute end-6 top-[calc(var(--ih)/2)] z-10 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex">
+      <div className="absolute end-6 top-[calc(var(--hh)+var(--ih)/2)] z-10 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex">
         {SLIDES.map((_, idx) => (
           <span
             key={idx}
@@ -196,7 +234,7 @@ export default function HeroSlider() {
           resetAutoplay()
         }}
         aria-label={t('hero.prev')}
-        className="absolute start-4 top-[calc(var(--ih)/2)] z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy lg:grid"
+        className="absolute start-4 top-[calc(var(--hh)+var(--ih)/2)] z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy lg:grid"
       >
         <ChevronLeft size={22} />
       </button>
@@ -206,13 +244,13 @@ export default function HeroSlider() {
           resetAutoplay()
         }}
         aria-label={t('hero.next')}
-        className="absolute end-4 top-[calc(var(--ih)/2)] z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy lg:grid"
+        className="absolute end-4 top-[calc(var(--hh)+var(--ih)/2)] z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-navy/30 text-white backdrop-blur transition-all hover:scale-105 hover:border-gold hover:bg-gold hover:text-navy lg:grid"
       >
         <ChevronRight size={22} />
       </button>
 
       {/* Dots / progress */}
-      <div className="absolute top-[calc(var(--ih)-22px)] start-1/2 z-10  flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
+      <div className="absolute top-[calc(var(--hh)+var(--ih)-22px)] start-1/2 z-10  flex -translate-x-1/2 gap-2.5 rtl:translate-x-1/2">
         {SLIDES.map((_, idx) => (
           <button
             key={idx}
