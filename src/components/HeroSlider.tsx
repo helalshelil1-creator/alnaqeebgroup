@@ -62,7 +62,7 @@ function TypedH1({ all, active }: { all: Heading[]; active: number }) {
     ))
   // All headlines share one grid cell, so the block is always as tall as the longest one and nothing moves between slides.
   return (
-    <div className="mt-5 grid">
+    <div className="grid lg:mt-5">
       {all.map((h, k) =>
         k === active ? (
           <h1 key={k} className="hero-h1 text-[1.7rem] font-bold leading-[1.12] text-white sm:text-4xl xl:text-5xl [grid-area:1/1]">
@@ -166,13 +166,13 @@ export default function HeroSlider() {
       <div className="bg-grid-dark absolute inset-0 opacity-30" aria-hidden="true" />
 
       {/* Content */}
-      <div className="container-x hero-fill relative flex items-start lg:items-center pt-[calc(var(--hh)+var(--ih))]">
+      <div className="container-x hero-fill relative flex items-stretch lg:items-center pt-[calc(var(--hh)+var(--ih))]">
         <div className="pointer-events-none absolute inset-y-0 start-0 w-6 bg-gradient-to-r from-navy/40 to-transparent hidden" aria-hidden="true" />
-        <div className="mx-auto w-full max-w-3xl pb-10 pt-4 text-center sm:px-14 lg:max-w-5xl lg:pb-10 xl:px-0">
+        <div className="mx-auto flex w-full max-w-3xl flex-col pb-[84px] pt-2 text-center lg:block lg:pt-4 sm:px-14 lg:max-w-5xl lg:pb-10 xl:px-0">
           {/* Phones: the logo (smaller on short screens) pulses with a moving shine above the headline */}
-          <div className="mb-2 flex justify-center [@media(min-height:740px)]:mb-4" aria-hidden="true">
+          <div className="flex flex-1 items-center justify-center lg:mb-4 lg:block lg:flex-none" aria-hidden="true">
             <span
-              className="logo-pulse relative block h-[52px] w-[78px] [@media(min-height:740px)]:h-[88px] [@media(min-width:1024px)]:!h-[64px] [@media(min-height:740px)]:w-[132px] [@media(min-width:1024px)]:!w-[96px]"
+              className="logo-pulse relative mx-auto block h-[52px] w-[78px] [@media(min-height:740px)]:h-[clamp(88px,15svh,140px)] [@media(min-width:1024px)]:!h-[64px] [@media(min-height:740px)]:w-[calc(clamp(88px,15svh,140px)*1.5)] [@media(min-width:1024px)]:!w-[96px]"
               style={{ ['--logo' as string]: `url(/img/logo-hero.webp)` }}
             >
               <img src="/img/logo-hero.webp" alt="" width={612} height={407} className="h-full w-full object-contain" />
@@ -183,6 +183,7 @@ export default function HeroSlider() {
           <AnimatePresence mode="wait">
             <motion.div
               key={i}
+              className="flex flex-[1.5] flex-col justify-evenly lg:block"
               initial="hidden"
               animate="show"
               exit={{ opacity: 0, y: -18, transition: { duration: 0.3 } }}
@@ -200,7 +201,7 @@ export default function HeroSlider() {
               <TypedH1 all={headings} active={i % headings.length} />
 
               <motion.div
-                className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:mt-8 sm:gap-4 max-sm:[&_a]:px-4 max-sm:[&_a]:py-2.5 max-sm:[&_a]:text-sm"
+                className="flex flex-wrap items-center justify-center gap-3 lg:mt-8 sm:gap-4 max-sm:[&_a]:px-4 max-sm:[&_a]:py-2.5 max-sm:[&_a]:text-sm"
                 variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
